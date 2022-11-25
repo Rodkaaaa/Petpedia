@@ -1,11 +1,20 @@
 package com.example.pillines.petpedia.model;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class Canales {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "idCanales", nullable = false)
     private Integer id;
+    @Column(name = "nombre_canal", nullable = false, unique = true)
     private String nombreCanal;
+    @Column(name = "siglas", nullable = true)
     private String siglas;
-
-
+    
     public Canales() {
     }
 
@@ -16,7 +25,7 @@ public class Canales {
     }
 
     public Integer getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(Integer id) {
@@ -24,7 +33,7 @@ public class Canales {
     }
 
     public String getNombreCanal() {
-        return this.nombreCanal;
+        return nombreCanal;
     }
 
     public void setNombreCanal(String nombreCanal) {
@@ -32,11 +41,11 @@ public class Canales {
     }
 
     public String getSiglas() {
-        return this.siglas;
+        return siglas;
     }
 
     public void setSiglas(String siglas) {
         this.siglas = siglas;
     }
-
+    
 }
