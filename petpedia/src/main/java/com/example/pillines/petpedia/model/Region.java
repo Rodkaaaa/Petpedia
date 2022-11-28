@@ -10,11 +10,11 @@ import javax.persistence.Id;
 public class Region {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(nullable = false, name = "idRegion")
+    @Column(nullable = true, name = "idRegion")
     private Integer id;
-    @Column(name = "nombre_region", unique = true, nullable = false)
+    @Column(name = "nombre_region", unique = true, nullable = true)
     private String nombreRegion;
-    @Column(name = "ordinal", nullable = false, unique = true)
+    @Column(name = "ordinal", nullable = true, unique = true)
     private String ordinal;
 
     public Region() {

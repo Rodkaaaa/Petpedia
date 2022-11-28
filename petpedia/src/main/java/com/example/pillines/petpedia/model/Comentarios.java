@@ -15,9 +15,9 @@ import javax.persistence.Id;
 public class Comentarios {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idComentarios", nullable = false)
+    @Column(name = "idComentarios", nullable = true)
     private Integer id;
-    @Column(name = "titulo_comentario", nullable = false)
+    @Column(name = "titulo_comentario", nullable = true)
     private String tituloComentario;
     private String comentarioText;
     private int statusComentario;
