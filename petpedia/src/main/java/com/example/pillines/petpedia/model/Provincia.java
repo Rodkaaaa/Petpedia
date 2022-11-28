@@ -9,10 +9,10 @@ import javax.persistence.Id;
 @Entity(name = "provincia")
 public class Provincia {
     @Id
-    @Column(name = "idProvincia", nullable = false)
+    @Column(name = "idProvincia", nullable = true)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @Column(name = "nombre_columna", nullable = false, unique = true)
+    @Column(name = "nombre_columna", nullable = true, unique = true)
     private String nombreProvincia;
 
     public Provincia() {
