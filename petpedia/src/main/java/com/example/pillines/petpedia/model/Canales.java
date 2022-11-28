@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 public class Canales {
+    //id
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "idCanales", nullable = false)
