@@ -1,19 +1,20 @@
 package com.example.pillines.petpedia.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+@Entity()
 public class Canales {
     //id
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idCanales", nullable = true)
+    @Column(name = "idCanales", nullable = false)
     private Integer id;
-    @Column(name = "nombre_canal", nullable = true, unique = true)
+    @Column(name = "nombre_canal", nullable = false, unique = true)
     private String nombreCanal;
-    @Column(name = "siglas", nullable = true)
+    @Column(name = "siglas", nullable = false)
     private String siglas;
     
     public Canales() {

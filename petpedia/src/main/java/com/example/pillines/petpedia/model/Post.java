@@ -4,34 +4,54 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity(name = "post") 
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idPost", nullable = true)
+    @Column(name = "idPost", nullable = false)
     private Integer id;
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String titulo;
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String contenido;
     @Column(name = "imgUrl")
     private String url;
-    @Column(nullable = true, name = "post_creacion")
+    @Column(nullable = false, name = "post_creacion")
     private Date creacionPost;
-    @Column(nullable = true, name = "status_post")
+    @Column(nullable = false, name = "status_post")
     private boolean statusPost;
     @Column(name = "puntuacion_post")
     private int puntuacion;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "id_usuario", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
+    private Usuario usuario;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "id_categoria", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
+    private Categoria categoria;
 
 
     public Post() {
     }
 
-    public Post(Integer id, String titulo, String contenido, String url, Date creacionPost, boolean statusPost, int puntuacion) {
+    public Post(Integer id, String titulo, String contenido, String url, Date creacionPost, boolean statusPost, int puntuacion, Usuario usuario, Categoria categoria) {
         this.id = id;
         this.titulo = titulo;
         this.contenido = contenido;
@@ -39,6 +59,8 @@ public class Post {
         this.creacionPost = creacionPost;
         this.statusPost = statusPost;
         this.puntuacion = puntuacion;
+        this.usuario = usuario;
+        this.categoria = categoria;
     }
 
     public Integer getId() {
@@ -101,7 +123,20 @@ public class Post {
         this.puntuacion = puntuacion;
     }
 
+    public Usuario getUsuario() {
+        return this.usuario;
+    }
 
-    
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Categoria getCategoria() {
+        return this.categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
     
 }
