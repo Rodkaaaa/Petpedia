@@ -1,37 +1,40 @@
 package com.example.pillines.petpedia.model;
 
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
-@Entity(name = "region")
+@Entity()
 public class Region {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(nullable = true, name = "idRegion")
-    private Integer id;
-    @Column(name = "nombre_region", unique = true, nullable = true)
+    private Integer idRegion;
+    @Column(name = "nombre_region", unique = true, nullable = false)
     private String nombreRegion;
-    @Column(name = "ordinal", nullable = true, unique = true)
+    @Column(name = "ordinal", nullable = false, unique = true)
     private String ordinal;
 
     public Region() {
     }
 
-    public Region(Integer id, String nombreRegion, String ordinal) {
-        this.id = id;
+    public Region(Integer idRegion, String nombreRegion, String ordinal) {
+        this.idRegion = idRegion;
         this.nombreRegion = nombreRegion;
         this.ordinal = ordinal;
     }
 
     public Integer getId() {
-        return id;
+        return idRegion;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(Integer idRegion) {
+        this.idRegion = idRegion;
     }
 
     public String getNombreRegion() {
@@ -49,4 +52,5 @@ public class Region {
     public void setOrdinal(String ordinal) {
         this.ordinal = ordinal;
     }
+
 }

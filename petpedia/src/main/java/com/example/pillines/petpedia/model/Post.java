@@ -12,17 +12,17 @@ import javax.persistence.Id;
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idPost", nullable = true)
+    @Column(name = "idPost", nullable = false)
     private Integer id;
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String titulo;
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String contenido;
     @Column(name = "imgUrl")
     private String url;
-    @Column(nullable = true, name = "post_creacion")
+    @Column(nullable = false, name = "post_creacion")
     private Date creacionPost;
-    @Column(nullable = true, name = "status_post")
+    @Column(nullable = false, name = "status_post")
     private boolean statusPost;
     @Column(name = "puntuacion_post")
     private int puntuacion;
