@@ -8,9 +8,9 @@ import javax.persistence.Id;
 public class Comuna {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idCommuna", nullable = false)
+    @Column(name = "idCommuna", nullable = true)
     private Integer id;
-    @Column(name = "nombre_provincia", nullable = false, unique = true)
+    @Column(name = "nombre_provincia", nullable = true, unique = true)
     private String nombreComuna;
 
     public Comuna() {
