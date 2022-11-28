@@ -3,9 +3,6 @@ package com.example.pillines.petpedia.model;
 import javax.persistence.Column;
 
 // HOLA A TODOS SOY YOOOOOOOOOOO
-<<<<<<< HEAD
-
-=======
 // xdxd
 
 import javax.persistence.Entity;
@@ -14,7 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity(name = "comentario")
->>>>>>> upstream/main
+
 public class Comentarios {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
