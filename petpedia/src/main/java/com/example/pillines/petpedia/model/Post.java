@@ -1,5 +1,107 @@
 package com.example.pillines.petpedia.model;
 
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity(name = "post") 
 public class Post {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "idPost", nullable = true)
+    private Integer id;
+    @Column(nullable = true)
+    private String titulo;
+    @Column(nullable = true)
+    private String contenido;
+    @Column(name = "imgUrl")
+    private String url;
+    @Column(nullable = true, name = "post_creacion")
+    private Date creacionPost;
+    @Column(nullable = true, name = "status_post")
+    private boolean statusPost;
+    @Column(name = "puntuacion_post")
+    private int puntuacion;
+
+
+    public Post() {
+    }
+
+    public Post(Integer id, String titulo, String contenido, String url, Date creacionPost, boolean statusPost, int puntuacion) {
+        this.id = id;
+        this.titulo = titulo;
+        this.contenido = contenido;
+        this.url = url;
+        this.creacionPost = creacionPost;
+        this.statusPost = statusPost;
+        this.puntuacion = puntuacion;
+    }
+
+    public Integer getId() {
+        return this.id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getTitulo() {
+        return this.titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getContenido() {
+        return this.contenido;
+    }
+
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
+    }
+
+    public String getUrl() {
+        return this.url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public Date getCreacionPost() {
+        return this.creacionPost;
+    }
+
+    public void setCreacionPost(Date creacionPost) {
+        this.creacionPost = creacionPost;
+    }
+
+    public boolean isStatusPost() {
+        return this.statusPost;
+    }
+
+    public boolean getStatusPost() {
+        return this.statusPost;
+    }
+
+    public void setStatusPost(boolean statusPost) {
+        this.statusPost = statusPost;
+    }
+
+    public int getPuntuacion() {
+        return this.puntuacion;
+    }
+
+    public void setPuntuacion(int puntuacion) {
+        this.puntuacion = puntuacion;
+    }
+
+
+    
     
 }
