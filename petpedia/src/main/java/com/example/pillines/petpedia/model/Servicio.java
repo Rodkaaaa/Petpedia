@@ -10,11 +10,11 @@ import javax.persistence.Id;
 public class Servicio {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idServicion", nullable = true)
+    @Column(name = "idServicion", nullable = false)
     private Integer id;
-    @Column(name = "tipoServicio", nullable = true, unique = true )
+    @Column(name = "tipoServicio", nullable = false, unique = true )
     private String tipoServicio;
-    @Column(name = "descripcion", nullable = true)
+    @Column(name = "descripcion", nullable = false)
     private String descripcion;
 
 
