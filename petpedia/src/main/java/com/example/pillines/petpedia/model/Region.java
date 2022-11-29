@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity()
 public class Region {
@@ -19,6 +20,9 @@ public class Region {
     private String nombreRegion;
     @Column(name = "ordinal", nullable = false, unique = true)
     private String ordinal;
+
+    @OneToOne(mappedBy = "region")
+    private Provincia Provincia;
 
     public Region() {
     }
