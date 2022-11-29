@@ -1,76 +1,58 @@
 package com.pillines.petpedia.model;
 
 import java.util.Date;
+import java.util.List;
 
-import javax.persistence.Column;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import javax.persistence.OneToMany;
 
 @Entity(name = "usuario")
 class Usuario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idUsuario",nullable = false)
+    @GeneratedValue()
     private Integer id;
-    @Column(nullable = false)
     private String nombre;
-    @Column(nullable = false)
     private String apellido;
-    @Column(name = "nombre_usuario",nullable = false)
     private String nombreUsuario;
-    @Column(nullable = false)
     private String email;
-    @Column(nullable = false)
     private String password;
-    @Column(name = "status_usuario",nullable = false)
     private boolean statusUsuario;
-    @Column(name = "usuario_direccion",nullable = false)
     private String direccion;
-    @Column(name = "usuario_creacion",nullable = false)
     private Date fechaCreacion;
-    @Column()
     private int puntacion;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_comuna", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+    @ManyToOne()
+    @JoinColumn(name = "id_comuna")
     private Comuna comuna;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_tipo_usuario", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+    @ManyToOne()
+    @JoinColumn(name = "id_tipo_usuario")
     private TipoUsuario tipoUsuario;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_servicio", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+    @ManyToOne()
+    @JoinColumn(name = "id_servicios")
     private Servicio servicio;
-    
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_canales", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+
+    @ManyToOne()
+    @JoinColumn(name = "id_canales")
     private Canales canales;
 
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Post> post;
 
     public Usuario() {
     }
 
-    public Usuario(Integer id, String nombre, String apellido, String nombreUsuario, String email, String password, boolean statusUsuario, String direccion, Date fechaCreacion, int puntacion, Comuna comuna, TipoUsuario tipoUsuario, Servicio servicio, Canales canales) {
+    public Usuario(Integer id, String nombre, String apellido, String nombreUsuario, String email, String password,
+            boolean statusUsuario, String direccion, Date fechaCreacion, int puntacion, Comuna comuna,
+            TipoUsuario tipoUsuario, Servicio servicio, Canales canales) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -86,7 +68,6 @@ class Usuario {
         this.servicio = servicio;
         this.canales = canales;
     }
-   
 
     public Integer getId() {
         return this.id;
