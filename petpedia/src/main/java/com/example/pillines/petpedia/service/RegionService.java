@@ -3,8 +3,6 @@ package com.example.pillines.petpedia.service;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
-
 import org.springframework.stereotype.Service;
 
 import com.example.pillines.petpedia.model.Region;
