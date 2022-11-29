@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.pillines.petpedia.model.Region;
@@ -26,7 +27,7 @@ public class RegionController {
         return regionService.findAll2();
     }
     @PostMapping("/region/save")
-    public void saveRegion(Region region){
+    public void saveRegion(@RequestBody Region region){
         regionService.saveRegion(region);
     }
 }
