@@ -25,4 +25,16 @@ public class ProvinciaService {
         return (List<Provincia>)provinciaRepository.findAllProvincias();
     }
 
+    public void saveProvincia(Provincia provincia){
+        provinciaRepository.save(provincia);
+    }
+
+    public void updateProvincia(Provincia provincia){
+        provinciaRepository.save(provincia);
+    }
+
+    public void deleteProvincia(Integer id){
+        provinciaRepository.deleteById(id);
+    }
+
 }
