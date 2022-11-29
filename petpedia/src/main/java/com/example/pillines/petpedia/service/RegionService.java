@@ -1,5 +1,6 @@
 package com.example.pillines.petpedia.service;
 
+
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -25,4 +26,5 @@ public class RegionService {
     public List<Region> findAll2(){
         return (List<Region>)regionRepository.findAllRegions();
     }
+
 }
