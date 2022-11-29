@@ -18,6 +18,6 @@ public interface CanalesRepository extends JpaRepository<Canales, Integer> {
     @Query(value = "SELECT * FROM canales where nombre_canal = ?1 AND siglas = ?2", nativeQuery = true)
     List<Canales> findAllCanalesSiglas(String nombreCanal, String siglas);
 
-    @Query(value = "SELECT * FROM canales c JOIN c.user us", nativeQuery = true)
+    @Query(value = "SELECT * FROM canales c JOIN c.usuario us", nativeQuery = true)
     List<Canales> buscarCanalesUsuario();
 }
