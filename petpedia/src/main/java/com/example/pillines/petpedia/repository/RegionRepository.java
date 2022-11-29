@@ -9,9 +9,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.example.pillines.petpedia.model.Region;
 
-
-
-public interface RegionRepository extends JpaRepository<Region, Integer> {
     
     @Query(value = "SELECT * FROM region WHERE nombre_region = ?1", nativeQuery = true)
     List<Region> findAllNombreRegion(String nombreRegion);
