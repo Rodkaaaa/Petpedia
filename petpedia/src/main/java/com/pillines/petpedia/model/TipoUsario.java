@@ -1,21 +1,24 @@
 package com.pillines.petpedia.model;
 
-import javax.persistence.Column;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity(name = "tipoUsuario")
 class TipoUsuario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idTipoUsuario")
+    @GeneratedValue()
     private Integer id;
-    @Column(name = "tipoUsuario", nullable = false, unique = true)
     private String tipoUsuario;
-  
+
+    @OneToMany(mappedBy = "tipoUsuario", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Usuario> usuario;
 
     public TipoUsuario() {
     }

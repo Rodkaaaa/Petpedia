@@ -1,9 +1,7 @@
 package com.pillines.petpedia.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 //rickyrickon
@@ -14,10 +12,8 @@ import javax.persistence.Id;
 @Entity(name = "categoria")
 public class Categoria {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idCategoria",nullable = false)
+    @GeneratedValue()
     private Integer id;
-    @Column(name = "nombre_categoria",nullable = false,unique = true)
     private String nombreCategoria;
 
 
