@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import com.example.pillines.petpedia.model.Region;
+
 public interface RegionRepository extends CrudRepository<Region,Integer>{
     
     @Query(value = "SELECT * FROM region WHERE nombre_region = ?1", nativeQuery = true)
@@ -21,7 +22,6 @@ public interface RegionRepository extends CrudRepository<Region,Integer>{
 
     @Query(value = "SELECT * FROM region r JOIN r.provincia pr", nativeQuery = true)
     List<Region> buscarRegionProvincia();
-    
     
     @Query(value = "SELECT * FROM region", nativeQuery = true)
     List<Region> findAllRegions();
