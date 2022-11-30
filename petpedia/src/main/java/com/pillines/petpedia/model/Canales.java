@@ -1,21 +1,24 @@
 package com.pillines.petpedia.model;
 
-import javax.persistence.Column;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 @Entity()
 public class Canales {
     //id
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idCanales", nullable = false)
+    @GeneratedValue()
     private Integer id;
-    @Column(name = "nombre_canal", nullable = false, unique = true)
     private String nombreCanal;
-    @Column(name = "siglas", nullable = false)
     private String siglas;
+
+    @OneToMany(mappedBy = "canales", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Usuario> usuario;
     
     public Canales() {
     }

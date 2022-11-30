@@ -2,49 +2,30 @@ package com.pillines.petpedia.model;
 
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 @Entity(name = "post") 
 public class Post {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idPost", nullable = false)
+    @GeneratedValue()
     private Integer id;
-    @Column(nullable = false)
     private String titulo;
-    @Column(nullable = false)
     private String contenido;
-    @Column(name = "imgUrl")
     private String url;
-    @Column(nullable = false, name = "post_creacion")
     private Date creacionPost;
-    @Column(nullable = false, name = "status_post")
     private boolean statusPost;
-    @Column(name = "puntuacion_post")
     private int puntuacion;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_usuario", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+    @ManyToOne()
+    @JoinColumn(name = "id_usuario")
     private Usuario usuario;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_categoria", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+    @ManyToOne()
+    @JoinColumn(name = "id_categoria")
     private Categoria categoria;
 
 
