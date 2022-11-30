@@ -1,5 +1,7 @@
 package com.pillines.petpedia.model;
 
+import javax.persistence.Column;
+
 // HOLA A TODOS SOY YOOOOOOOOOOO
 // xdxd
 
@@ -15,13 +17,15 @@ public class Comentarios {
     @Id
     @GeneratedValue()
     private Integer id;
+    @Column(nullable = false)
     private String tituloComentario;
+    @Column(nullable = false)
     private String comentarioText;
     private int statusComentario;
     private int puntacion;
 
     @ManyToOne()
-    @JoinColumn(name = "id_usuarios")
+    @JoinColumn(name = "id_usuarios", nullable = false)
     private Post post;
 
     public Comentarios() {

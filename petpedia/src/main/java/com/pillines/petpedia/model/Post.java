@@ -2,6 +2,7 @@ package com.pillines.petpedia.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,19 +14,22 @@ public class Post {
     @Id
     @GeneratedValue()
     private Integer id;
+    @Column(nullable = false)
     private String titulo;
+    @Column(nullable = false)
     private String contenido;
     private String url;
+    @Column(nullable = false)
     private Date creacionPost;
     private boolean statusPost;
     private int puntuacion;
 
     @ManyToOne()
-    @JoinColumn(name = "id_usuario")
+    @JoinColumn(name = "id_usuario", nullable = false)
     private Usuario usuario;
 
     @ManyToOne()
-    @JoinColumn(name = "id_categoria")
+    @JoinColumn(name = "id_categoria", nullable = false)
     private Categoria categoria;
 
     public Post() {
