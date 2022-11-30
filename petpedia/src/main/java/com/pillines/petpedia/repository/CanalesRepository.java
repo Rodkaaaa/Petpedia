@@ -8,7 +8,7 @@ import com.pillines.petpedia.model.Canales;
 
 
 public interface CanalesRepository extends JpaRepository<Canales, Integer> {
-    
+    //Query's
     @Query(value = "SELECT * FROM canales WHERE nombre_canal = ?1", nativeQuery = true)
     List<Canales> findAllNombreCanales(String nombreCanal);
 

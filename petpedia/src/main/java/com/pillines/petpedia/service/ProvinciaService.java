@@ -14,31 +14,32 @@ public class ProvinciaService {
 
     private ProvinciaRepository provinciaRepository;
 
-    public ProvinciaService(ProvinciaRepository provinciaRepository){
+    public ProvinciaService(ProvinciaRepository provinciaRepository) {
         this.provinciaRepository = provinciaRepository;
     }
 
-    public List<Provincia> findAll(){
-        return (List<Provincia>)provinciaRepository.findAll();
+    // CRUD
+    public List<Provincia> findAll() {
+        return (List<Provincia>) provinciaRepository.findAll();
     }
 
-    public List<Provincia> findAll2(){
-        return (List<Provincia>)provinciaRepository.findAllProvincias();
+    public List<Provincia> findAll2() {
+        return (List<Provincia>) provinciaRepository.findAllProvincias();
     }
 
-    public void saveProvincia(Provincia provincia){
+    public void saveProvincia(Provincia provincia) {
         provinciaRepository.save(provincia);
     }
 
-    public void updateProvincia(Provincia provincia){
+    public void updateProvincia(Provincia provincia) {
         provinciaRepository.save(provincia);
     }
 
-    public void deleteProvincia(Integer id){
+    public void deleteProvincia(Integer id) {
         provinciaRepository.deleteById(id);
     }
 
-    public void saveAllProvincia(List<Provincia> provincia){
+    public void saveAllProvincia(List<Provincia> provincia) {
         provinciaRepository.saveAll(provincia);
     }
 

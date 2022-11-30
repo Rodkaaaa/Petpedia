@@ -7,8 +7,8 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.pillines.petpedia.model.TipoUsuario;
 
-public interface TipoUsuarioRepository extends JpaRepository<TipoUsuario,String> {
-    
+public interface TipoUsuarioRepository extends JpaRepository<TipoUsuario, String> {
+    // Query's
     @Query(value = "SELECT * FROM tipousuario WHERE tipoUsuario = ?1", nativeQuery = true)
     List<TipoUsuario> findAllTipoUsuario();
 

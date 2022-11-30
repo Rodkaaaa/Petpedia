@@ -2,18 +2,17 @@ package com.pillines.petpedia.model;
 
 import javax.persistence.Column;
 
-// HOLA A TODOS SOY YOOOOOOOOOOO
-// xdxd
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+//clase
 @Entity(name = "comentario")
 
 public class Comentarios {
+    // atributos
     @Id
     @GeneratedValue()
     private Integer id;
@@ -23,11 +22,12 @@ public class Comentarios {
     private String comentarioText;
     private int statusComentario;
     private int puntacion;
-
+    // Relaciones
     @ManyToOne()
     @JoinColumn(name = "id_usuarios", nullable = false)
     private Post post;
 
+    // constructores
     public Comentarios() {
     }
 
@@ -40,6 +40,7 @@ public class Comentarios {
         this.puntacion = puntacion;
         this.post = post;
     }
+    // Getter y Setters
 
     public Integer getId() {
         return this.id;

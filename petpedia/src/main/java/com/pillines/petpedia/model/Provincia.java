@@ -3,30 +3,31 @@ package com.pillines.petpedia.model;
 import java.util.List;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+//clase
 @Entity(name = "provincia")
 public class Provincia {
+    // atributos
     @Id
     @GeneratedValue()
     private Integer idProvincia;
     private String nombreProvincia;
-
-    @OneToMany(mappedBy = "provincia", cascade = CascadeType.ALL,  fetch = FetchType.EAGER)
+    // Relaciones
+    @OneToMany(mappedBy = "provincia", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Comuna> comuna;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_region")
     private Region region;
 
+    // constructores
     public Provincia() {
     }
 
@@ -35,6 +36,7 @@ public class Provincia {
         this.nombreProvincia = nombreProvincia;
         this.region = region;
     }
+    // Getter y Setters
 
     public Integer getId() {
         return idProvincia;
