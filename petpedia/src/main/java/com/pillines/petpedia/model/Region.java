@@ -3,6 +3,7 @@ package com.pillines.petpedia.model;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -14,7 +15,9 @@ public class Region {
     @Id
     @GeneratedValue()
     private Integer idRegion;
+    @Column(nullable = false , unique = true)
     private String nombreRegion;
+    @Column(nullable = false , unique = true)
     private String ordinal;
 
     @OneToMany(mappedBy = "region", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
