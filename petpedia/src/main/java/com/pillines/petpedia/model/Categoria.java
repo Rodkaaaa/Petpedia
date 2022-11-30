@@ -5,11 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-//rickyrickon
-//123
-//Howolaass
-//javierklo
-//rickymartin
+
 @Entity(name = "categoria")
 public class Categoria {
     @Id
