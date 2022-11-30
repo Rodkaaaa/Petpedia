@@ -23,10 +23,6 @@ public class CategoriaService {
             return (List<Categoria>)categoriaRepository.findAll();
         }
     
-        public List<Categoria> findAll2(){
-            return (List<Categoria>)categoriaRepository.buscarCategoriasUsuario();
-        }
-    
         public void saveCategoria(Categoria categoria){
             categoriaRepository.save(categoria);
         }

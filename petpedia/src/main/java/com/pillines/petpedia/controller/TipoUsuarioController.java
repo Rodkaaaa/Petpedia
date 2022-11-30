@@ -24,7 +24,7 @@ public class TipoUsuarioController {
 
     @GetMapping("/tipoUsuario/getAll/")
     public List<TipoUsuario> findAll(){
-        return tipoUsuarioService.findAll2();
+        return tipoUsuarioService.findAll();
     }
     @PostMapping("/tipoUsuario/save/")
     public void saveTipoUsuario(@RequestBody TipoUsuario tipoUsuario){
