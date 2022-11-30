@@ -1,9 +1,6 @@
 package com.pillines.petpedia.service;
 
-
 import java.util.List;
-
-
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -39,6 +36,10 @@ public class ProvinciaService {
 
     public void deleteProvincia(Integer id){
         provinciaRepository.deleteById(id);
+    }
+
+    public void saveAllProvincia(List<Provincia> provincia){
+        provinciaRepository.saveAll(provincia);
     }
 
 }

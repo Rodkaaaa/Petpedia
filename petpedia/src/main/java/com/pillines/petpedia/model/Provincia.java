@@ -7,25 +7,25 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-@Entity()
+@Entity(name = "provincia")
 public class Provincia {
     @Id
     @GeneratedValue()
     private Integer idProvincia;
-    @Column(nullable = false)
     private String nombreProvincia;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_region", nullable = false)
-    private Region region;
-
-    @OneToMany(mappedBy = "provincia", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "provincia", cascade = CascadeType.ALL,  fetch = FetchType.EAGER)
     private List<Comuna> comuna;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_region")
+    private Region region;
 
     public Provincia() {
     }

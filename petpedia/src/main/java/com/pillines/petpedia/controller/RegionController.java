@@ -30,4 +30,9 @@ public class RegionController {
     public void saveRegion(@RequestBody Region region){
         regionService.saveRegion(region);
     }
+
+    @PostMapping("/region/saveAll")
+    public void saveAllRegion(@RequestBody List<Region> region){
+        regionService.saveAllRegion(region);
+    }
 }

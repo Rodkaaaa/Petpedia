@@ -16,5 +16,5 @@ public interface TipoUsuarioRepository extends JpaRepository<TipoUsuario,String>
     List<TipoUsuario> findAllId(Integer id);
 
     @Query(value = "SELECT * FROM tipousuario where tipousUario = ?1 AND id = ?2", nativeQuery = true)
-    List<TipoUsuario> findAllTipoUsuariosId(String tipousuario, Integer id);
+    List<TipoUsuario> findAllTipoUsuariosId(String tipoUsuario, Integer id);
 }

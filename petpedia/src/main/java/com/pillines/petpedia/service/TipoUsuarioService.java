@@ -19,11 +19,11 @@ public class TipoUsuarioService {
     }
 
     public List<TipoUsuario> findAll(){
-        return (List<TipoUsuario>)tipoUsuarioRepository.findAll();
+        return tipoUsuarioRepository.findAll();
     }
 
     public List<TipoUsuario> findAll2(){
-        return (List<TipoUsuario>)tipoUsuarioRepository.findAllTipoUsuario();
+        return tipoUsuarioRepository.findAllTipoUsuario();
     }
 
     public void saveTipoUsuario(TipoUsuario tipoUsuario){
