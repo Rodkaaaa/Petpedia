@@ -58,5 +58,4 @@ public class Comuna {
         this.provincia = provincia;
     }
 
-
 }

@@ -1,5 +1,9 @@
 package com.pillines.petpedia.repository;
 
-public class UsuarioRepository {
+import org.springframework.data.repository.CrudRepository;
+
+import com.pillines.petpedia.model.Usuario;
+
+public interface UsuarioRepository extends CrudRepository<Usuario, Integer>{
     
 }

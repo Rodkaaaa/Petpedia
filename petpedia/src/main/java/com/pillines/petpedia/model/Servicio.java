@@ -9,8 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-
-
 @Entity(name = "servicio")
 public class Servicio {
     @Id

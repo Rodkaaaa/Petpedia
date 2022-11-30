@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity(name = "tipoUsuario")
-class TipoUsuario {
+public class TipoUsuario {
 
     @Id
     @GeneratedValue()
@@ -27,7 +27,6 @@ class TipoUsuario {
         this.id = id;
         this.tipoUsuario = tipoUsuario;
     }
-    
 
     public Integer getId() {
         return this.id;

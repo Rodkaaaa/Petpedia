@@ -1,4 +1,5 @@
 package com.pillines.petpedia.model;
+
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -15,10 +16,9 @@ public class Region {
     private Integer idRegion;
     private String nombreRegion;
     private String ordinal;
-    
+
     @OneToMany(mappedBy = "region", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Provincia> provincia;
-
 
     public Region() {
     }
