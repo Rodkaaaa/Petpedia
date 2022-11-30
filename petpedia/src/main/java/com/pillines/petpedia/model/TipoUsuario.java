@@ -16,7 +16,6 @@ public class TipoUsuario {
     @Id
     @GeneratedValue()
     private Integer id;
-    @Column(nullable = false , unique = true)
     private String tipoUsuario;
 
     @OneToMany(mappedBy = "tipoUsuario", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
