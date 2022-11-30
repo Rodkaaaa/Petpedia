@@ -33,4 +33,8 @@ public class RegionService {
         regionRepository.save(region);
     }
 
+    public void saveAllRegion(List<Region> region){
+        regionRepository.saveAll(region);
+    }
+
 }

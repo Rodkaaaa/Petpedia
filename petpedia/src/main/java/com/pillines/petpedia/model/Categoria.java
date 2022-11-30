@@ -1,5 +1,6 @@
 package com.pillines.petpedia.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,6 +11,7 @@ public class Categoria {
     @Id
     @GeneratedValue()
     private Integer id;
+    @Column(nullable = false, unique = true)
     private String nombreCategoria;
 
     public Categoria() {
