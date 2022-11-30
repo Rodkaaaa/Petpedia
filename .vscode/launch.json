@@ -9,6 +9,16 @@
             "projectName": "generation1",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PetpediaApplication<petpedia>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.pillines.petpedia.PetpediaApplication",
+            "projectName": "petpedia",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }

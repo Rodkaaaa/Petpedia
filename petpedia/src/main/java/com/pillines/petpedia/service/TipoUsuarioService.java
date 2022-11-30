@@ -11,22 +11,23 @@ import com.pillines.petpedia.repository.TipoUsuarioRepository;
 @Service
 @Transactional
 public class TipoUsuarioService {
-    
+
     private TipoUsuarioRepository tipoUsuarioRepository;
 
-    public TipoUsuarioService(TipoUsuarioRepository tipoUsuarioRepository){
+    public TipoUsuarioService(TipoUsuarioRepository tipoUsuarioRepository) {
         this.tipoUsuarioRepository = tipoUsuarioRepository;
     }
 
-    public List<TipoUsuario> findAll(){
-        return (List<TipoUsuario>)tipoUsuarioRepository.findAll();
+    // CRUD
+    public List<TipoUsuario> findAll() {
+        return tipoUsuarioRepository.findAll();
     }
 
-    public List<TipoUsuario> findAll2(){
-        return (List<TipoUsuario>)tipoUsuarioRepository.findAllTipoUsuario();
+    public List<TipoUsuario> findAll2() {
+        return tipoUsuarioRepository.findAllTipoUsuario();
     }
 
-    public void saveTipoUsuario(TipoUsuario tipoUsuario){
+    public void saveTipoUsuario(TipoUsuario tipoUsuario) {
         tipoUsuarioRepository.save(tipoUsuario);
     }
 }

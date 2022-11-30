@@ -3,23 +3,29 @@ package com.pillines.petpedia.model;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+//clase
 @Entity(name = "servicio")
 public class Servicio {
+    // atributos
     @Id
     @GeneratedValue()
     private Integer id;
+    @Column(nullable = false, unique = true)
     private String tipoServicio;
+    @Column(nullable = false, unique = true)
     private String descripcion;
-
+    // Relaciones
     @OneToMany(mappedBy = "servicio", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Usuario> usuario;
 
+    // constructores
     public Servicio() {
     }
 
@@ -28,6 +34,7 @@ public class Servicio {
         this.tipoServicio = tipoServicio;
         this.descripcion = descripcion;
     }
+    // Getter y Setters
 
     public Integer getId() {
         return this.id;
