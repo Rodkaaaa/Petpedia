@@ -22,12 +22,12 @@ public class ComunaController {
         this.comunaService = comunaService;
     }
 
-    @GetMapping
+    @GetMapping("/comuna/getAll")
     public List<Comuna> getAll(){
         return comunaService.getAll();
     }
 
-    @PostMapping
+    @PostMapping("/comuna/save")
     public void saveComuna(@RequestBody Comuna comuna){
         comunaService.saveComuna(comuna);
     }

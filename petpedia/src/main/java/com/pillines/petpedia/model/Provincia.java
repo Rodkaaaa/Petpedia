@@ -24,7 +24,6 @@ public class Provincia {
 
     @OneToMany(mappedBy = "provincia", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Comuna> comuna;
-    
 
     public Provincia() {
     }

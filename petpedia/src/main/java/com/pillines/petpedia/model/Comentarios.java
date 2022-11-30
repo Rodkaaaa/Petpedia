@@ -1,7 +1,5 @@
 package com.pillines.petpedia.model;
 
-
-
 // HOLA A TODOS SOY YOOOOOOOOOOO
 // xdxd
 
@@ -26,11 +24,11 @@ public class Comentarios {
     @JoinColumn(name = "id_usuarios")
     private Post post;
 
-
     public Comentarios() {
     }
 
-    public Comentarios(Integer id, String tituloComentario, String comentarioText, int statusComentario, int puntacion, Post post) {
+    public Comentarios(Integer id, String tituloComentario, String comentarioText, int statusComentario, int puntacion,
+            Post post) {
         this.id = id;
         this.tituloComentario = tituloComentario;
         this.comentarioText = comentarioText;
@@ -86,5 +84,5 @@ public class Comentarios {
     public void setPost(Post post) {
         this.post = post;
     }
-    
+
 }

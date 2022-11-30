@@ -8,9 +8,10 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+
 @Entity()
 public class Canales {
-    //id
+    // id
     @Id
     @GeneratedValue()
     private Integer id;
@@ -19,7 +20,7 @@ public class Canales {
 
     @OneToMany(mappedBy = "canales", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Usuario> usuario;
-    
+
     public Canales() {
     }
 
@@ -52,5 +53,5 @@ public class Canales {
     public void setSiglas(String siglas) {
         this.siglas = siglas;
     }
-    
+
 }
