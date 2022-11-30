@@ -24,7 +24,7 @@ public class ComunaController {
 
     @GetMapping
     public List<Comuna> getAll(){
-        return comunaService.getAll()
+        return comunaService.getAll();
     }
 
     @PostMapping
