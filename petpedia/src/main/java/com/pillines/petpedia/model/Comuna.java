@@ -7,21 +7,21 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-@Entity()
+@Entity(name = "comuna")
 public class Comuna {
     @Id
     @GeneratedValue()
     private Integer idComuna;
-    @Column(nullable = false, unique = true)
     private String nombreComuna;
 
-    @ManyToOne()
-    @JoinColumn(name = "id_provincia", nullable = false)
+    @ManyToOne(fetch = FetchType.EAGER )
+    @JoinColumn(name = "id_provincia")
     private Provincia provincia;
 
     @OneToMany(mappedBy = "comuna", cascade = CascadeType.ALL, fetch = FetchType.EAGER)

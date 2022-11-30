@@ -41,6 +41,11 @@ public class ProvinciaController {
 
     @GetMapping("/provincia/getAll")
     public List<Provincia> findAll(){
-        return provinciaService.findAll2();
+        return provinciaService.findAll();
+    }
+
+    @PostMapping("/provincia/saveAll")
+    public void saveAllProvincia(@RequestBody List<Provincia> provincia){
+        provinciaService.saveAllProvincia(provincia);
     }
 }
