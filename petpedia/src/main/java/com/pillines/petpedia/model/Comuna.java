@@ -1,18 +1,12 @@
-package com.example.pillines.petpedia.model;
+package com.pillines.petpedia.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity()
 public class Comuna {
@@ -22,10 +16,8 @@ public class Comuna {
     @Column(name = "nombre_comuna", nullable = false, unique = true)
     private String nombreComuna;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_provincia", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+    @ManyToOne()
+    @JoinColumn(name = "id_provincia")
     private Provincia provincia;
 
     public Comuna() {

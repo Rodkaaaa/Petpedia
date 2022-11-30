@@ -1,6 +1,6 @@
-package com.example.pillines.petpedia.model;
-
+package com.pillines.petpedia.model;
 import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,16 +9,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
-@Entity()
+@Entity(name = "region")
 public class Region {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue()
     private Integer idRegion;
-    @Column(name = "nombre_region", unique = true, nullable = false)
     private String nombreRegion;
-    @Column(name = "ordinal", nullable = false, unique = true)
     private String ordinal;
+    
+    @OneToMany(mappedBy = "region", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Provincia> provincia;
+
 
     public Region() {
     }

@@ -1,4 +1,4 @@
-package com.example.pillines.petpedia.model;
+package com.pillines.petpedia.model;
 
 import java.util.Date;
 

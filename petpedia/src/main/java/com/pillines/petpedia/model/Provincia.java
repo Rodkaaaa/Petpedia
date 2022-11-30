@@ -1,4 +1,4 @@
-package com.example.pillines.petpedia.model;
+package com.pillines.petpedia.model;
 
 import java.util.List;
 
@@ -13,24 +13,21 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 @Entity()
 public class Provincia {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idProvincia;
-    @Column(name = "nombre_provincia", nullable = false, unique = true)
+    @Column(name = "nombre_provincia", unique = true)
     private String nombreProvincia;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_region", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_region")
     private Region region;
+
+    @OneToMany(mappedBy = "provincia", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Provincia> provincia;
+    
 
     public Provincia() {
     }
@@ -64,7 +61,5 @@ public class Provincia {
     public void setRegion(Region region) {
         this.region = region;
     }
-
-  
 
 }
