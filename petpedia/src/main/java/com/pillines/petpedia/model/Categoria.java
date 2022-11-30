@@ -16,7 +16,6 @@ public class Categoria {
     private Integer id;
     private String nombreCategoria;
 
-
     public Categoria() {
     }
 
@@ -40,6 +39,5 @@ public class Categoria {
     public void setNombreCategoria(String nombreCategoria) {
         this.nombreCategoria = nombreCategoria;
     }
-
 
 }

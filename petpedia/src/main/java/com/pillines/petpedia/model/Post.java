@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-@Entity(name = "post") 
+@Entity(name = "post")
 public class Post {
     @Id
     @GeneratedValue()
@@ -28,11 +28,11 @@ public class Post {
     @JoinColumn(name = "id_categoria")
     private Categoria categoria;
 
-
     public Post() {
     }
 
-    public Post(Integer id, String titulo, String contenido, String url, Date creacionPost, boolean statusPost, int puntuacion, Usuario usuario, Categoria categoria) {
+    public Post(Integer id, String titulo, String contenido, String url, Date creacionPost, boolean statusPost,
+            int puntuacion, Usuario usuario, Categoria categoria) {
         this.id = id;
         this.titulo = titulo;
         this.contenido = contenido;
@@ -119,5 +119,5 @@ public class Post {
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
-    
+
 }

@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity(name = "usuario")
-class Usuario {
+public class Usuario {
 
     @Id
     @GeneratedValue()
