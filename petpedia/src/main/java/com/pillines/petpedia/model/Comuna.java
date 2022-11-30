@@ -3,6 +3,7 @@ package com.pillines.petpedia.model;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -16,10 +17,11 @@ public class Comuna {
     @Id
     @GeneratedValue()
     private Integer idComuna;
+    @Column(nullable = false, unique = true)
     private String nombreComuna;
 
     @ManyToOne()
-    @JoinColumn(name = "id_provincia")
+    @JoinColumn(name = "id_provincia", nullable = false)
     private Provincia provincia;
 
     @OneToMany(mappedBy = "comuna", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
