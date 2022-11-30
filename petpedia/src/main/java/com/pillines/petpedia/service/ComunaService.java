@@ -20,7 +20,7 @@ public class ComunaService {
     }
 
     public void saveComuna(Comuna comuna){
-        comunaRepository.save(comuna)
+        comunaRepository.save(comuna);
     }
 
     public List<Comuna> getAll(){
