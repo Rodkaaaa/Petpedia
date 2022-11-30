@@ -2,13 +2,12 @@ package com.pillines.petpedia.repository;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-
-import org.springframework.data.repository.CrudRepository;
 
 import com.pillines.petpedia.model.Region;
 
-public interface RegionRepository extends CrudRepository<Region,Integer>{
+public interface RegionRepository extends JpaRepository<Region,Integer>{
     
     @Query(value = "SELECT * FROM region WHERE nombre_region = ?1", nativeQuery = true)
     List<Region> findAllNombreRegion(String nombreRegion);

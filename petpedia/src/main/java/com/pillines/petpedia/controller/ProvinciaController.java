@@ -5,8 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.pillines.petpedia.model.Provincia;
@@ -23,17 +25,17 @@ public class ProvinciaController {
     }
 
     @PostMapping("/provincia/save")
-    public void saveProvincia(Provincia provincia){
+    public void saveProvincia(@RequestBody Provincia provincia){
         provinciaService.saveProvincia(provincia);
     }
 
     @PutMapping("/provincia/update")
-    public void updateProvincia(Provincia provincia){
+    public void updateProvincia(@RequestBody Provincia provincia){
         provinciaService.saveProvincia(provincia);
     }
 
-    @PostMapping("/provincia/delete")
-    public void saveProvincia(Integer id){
+    @PostMapping("/provincia/delete/{id}")
+    public void saveProvincia(@PathVariable("id") Integer id){
         provinciaService.deleteProvincia(id);
     }
 
