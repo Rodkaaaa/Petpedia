@@ -18,21 +18,22 @@ public class RegionController {
 
     private RegionService regionService;
 
-    public RegionController(@Autowired RegionService regionService){
+    public RegionController(@Autowired RegionService regionService) {
         this.regionService = regionService;
     }
 
     @GetMapping("/region/getAll/")
-    public List<Region> findAll(){
+    public List<Region> findAll() {
         return regionService.findAll2();
     }
+
     @PostMapping("/region/save")
-    public void saveRegion(@RequestBody Region region){
+    public void saveRegion(@RequestBody Region region) {
         regionService.saveRegion(region);
     }
 
     @PostMapping("/region/saveAll")
-    public void saveAllRegion(@RequestBody List<Region> region){
+    public void saveAllRegion(@RequestBody List<Region> region) {
         regionService.saveAllRegion(region);
     }
 }

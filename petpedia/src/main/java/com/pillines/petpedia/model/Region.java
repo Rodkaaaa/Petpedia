@@ -11,17 +11,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+//clase
 @Entity(name = "region")
 public class Region {
+    // atributos
     @Id
     @GeneratedValue()
     private Integer idRegion;
     private String nombreRegion;
     private String ordinal;
-
+    // Relaciones
     @OneToMany(mappedBy = "region", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Provincia> provincia;
 
+    // constructores
     public Region() {
     }
 
@@ -30,6 +33,7 @@ public class Region {
         this.nombreRegion = nombreRegion;
         this.ordinal = ordinal;
     }
+    // Getter y Setters
 
     public Integer getId() {
         return idRegion;

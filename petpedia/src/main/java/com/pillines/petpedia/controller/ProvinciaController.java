@@ -20,32 +20,32 @@ public class ProvinciaController {
 
     private ProvinciaService provinciaService;
 
-    public ProvinciaController(@Autowired ProvinciaService provinciaService){
+    public ProvinciaController(@Autowired ProvinciaService provinciaService) {
         this.provinciaService = provinciaService;
     }
 
     @PostMapping("/provincia/save")
-    public void saveProvincia(@RequestBody Provincia provincia){
+    public void saveProvincia(@RequestBody Provincia provincia) {
         provinciaService.saveProvincia(provincia);
     }
 
     @PutMapping("/provincia/update")
-    public void updateProvincia(@RequestBody Provincia provincia){
+    public void updateProvincia(@RequestBody Provincia provincia) {
         provinciaService.saveProvincia(provincia);
     }
 
     @PostMapping("/provincia/delete/{id}")
-    public void saveProvincia(@PathVariable("id") Integer id){
+    public void saveProvincia(@PathVariable("id") Integer id) {
         provinciaService.deleteProvincia(id);
     }
 
     @GetMapping("/provincia/getAll")
-    public List<Provincia> findAll(){
+    public List<Provincia> findAll() {
         return provinciaService.findAll();
     }
 
     @PostMapping("/provincia/saveAll")
-    public void saveAllProvincia(@RequestBody List<Provincia> provincia){
+    public void saveAllProvincia(@RequestBody List<Provincia> provincia) {
         provinciaService.saveAllProvincia(provincia);
     }
 }

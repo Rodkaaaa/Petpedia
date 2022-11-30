@@ -16,20 +16,20 @@ import com.pillines.petpedia.service.ComunaService;
 @RestController
 @CrossOrigin("*")
 public class ComunaController {
-    
+
     private ComunaService comunaService;
 
-    public ComunaController(@Autowired ComunaService comunaService){
+    public ComunaController(@Autowired ComunaService comunaService) {
         this.comunaService = comunaService;
     }
 
     @GetMapping("/comuna/getAll")
-    public List<Comuna> getAll(){
+    public List<Comuna> getAll() {
         return comunaService.getAll();
     }
 
     @PostMapping("/comuna/save")
-    public void saveComuna(@RequestBody Comuna comuna){
+    public void saveComuna(@RequestBody Comuna comuna) {
         comunaService.saveComuna(comuna);
     }
 }

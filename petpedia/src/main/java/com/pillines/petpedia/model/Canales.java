@@ -10,9 +10,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+//clase
 @Entity()
 public class Canales {
-    // id
+    // atributos
     @Id
     @GeneratedValue()
     private Integer id;
@@ -20,10 +21,11 @@ public class Canales {
     private String nombreCanal;
     @Column(nullable = false, unique = true)
     private String siglas;
-
+    // relacion
     @OneToMany(mappedBy = "canales", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Usuario> usuario;
 
+    // constructores
     public Canales() {
     }
 
@@ -33,6 +35,7 @@ public class Canales {
         this.siglas = siglas;
     }
 
+    // Getter y Setters
     public Integer getId() {
         return id;
     }

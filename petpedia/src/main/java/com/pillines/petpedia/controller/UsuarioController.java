@@ -19,30 +19,30 @@ import com.pillines.petpedia.service.UsuarioService;
 @RestController
 @CrossOrigin("*")
 public class UsuarioController {
-    
+
     private UsuarioService usuarioService;
 
-    public UsuarioController(@Autowired UsuarioService usuarioService){
+    public UsuarioController(@Autowired UsuarioService usuarioService) {
         this.usuarioService = usuarioService;
     }
 
     @PostMapping("/usuario/save")
-    public void saveUsuario(@RequestBody Usuario usuario){
+    public void saveUsuario(@RequestBody Usuario usuario) {
         usuarioService.saveUsuario(usuario);
     }
 
     @PutMapping("/usuario/update")
-    public void updateUsuario(@RequestBody Usuario usuario){
+    public void updateUsuario(@RequestBody Usuario usuario) {
         usuarioService.updateUsuario(usuario);
     }
 
     @DeleteMapping("/usuario/delete/{id}")
-    public void deleteUsuario(@PathVariable("id") Integer id){
+    public void deleteUsuario(@PathVariable("id") Integer id) {
         usuarioService.deleteUsuario(id);
     }
 
     @GetMapping("/usuario/getAll")
-    public List<Usuario> getAllUsuario(){
+    public List<Usuario> getAllUsuario() {
         return (List<Usuario>) usuarioService.getAllUsuario();
     }
 }
