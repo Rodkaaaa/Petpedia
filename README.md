@@ -1,4 +1,6 @@
-<h1>Proyecto integrador PetPedia</h1>    
+<h1>Proyecto integrador PetPedia</h1> 
+
+![Image text](https://github.com/Rodkaaaa/Petpedia/blob/main/Frontend/LogosPetpediaBlanco-05.png?raw=true)
 
 Página sobre datos y ubicación de veterinarias: Nuestra idea nace desde la necesidad que existe actualmente en muchos colectivos animalistas, los cuales se comunican por grupos informales de redes sociales como facebook o instagram, ya sea pidiendo ayuda para urgencias veterinarias y datos en donde se encuentren precios accesibles para esterilizaciones, vacunas, alimentos, etc. Nos enfocamos en que esta página web sea una solución amigable y sencilla para aquellos usuarios que muchas veces se ven perdidos ante el poco acceso a la información que existe para estos casos.
 
