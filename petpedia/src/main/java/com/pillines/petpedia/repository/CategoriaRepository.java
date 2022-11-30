@@ -7,9 +7,9 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.pillines.petpedia.model.Categoria;
 
-public interface CategoriaRepository extends CrudRepository <Categoria, Integer> {
+public interface CategoriaRepository extends CrudRepository<Categoria, Integer> {
 
-
+    // Query's
     @Query(value = "SELECT * FROM categorias WHERE nombre_categoria = ?1", nativeQuery = true)
     List<Categoria> findAllNombreCategorias(String nombreCategoria);
 
@@ -17,4 +17,3 @@ public interface CategoriaRepository extends CrudRepository <Categoria, Integer>
     List<Categoria> buscarCategoriasUsuario();
 
 }
-

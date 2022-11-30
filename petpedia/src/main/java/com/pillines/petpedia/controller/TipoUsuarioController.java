@@ -18,17 +18,18 @@ public class TipoUsuarioController {
 
     private TipoUsuarioService tipoUsuarioService;
 
-    public TipoUsuarioController(@Autowired TipoUsuarioService tipoUsuarioService){
+    public TipoUsuarioController(@Autowired TipoUsuarioService tipoUsuarioService) {
         this.tipoUsuarioService = tipoUsuarioService;
     }
 
     @GetMapping("/tipoUsuario/getAll/")
-    public List<TipoUsuario> findAll(){
+    public List<TipoUsuario> findAll() {
         return tipoUsuarioService.findAll();
     }
+
     @PostMapping("/tipoUsuario/save/")
-    public void saveTipoUsuario(@RequestBody TipoUsuario tipoUsuario){
+    public void saveTipoUsuario(@RequestBody TipoUsuario tipoUsuario) {
         tipoUsuarioService.saveTipoUsuario(tipoUsuario);
     }
-    
+
 }

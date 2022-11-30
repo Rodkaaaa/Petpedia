@@ -13,29 +13,30 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+//clase
 @Entity(name = "usuario")
 public class Usuario {
-
+    // atributos
     @Id
     @GeneratedValue()
     private Integer id;
-    @Column(nullable = false )
+    @Column(nullable = false)
     private String nombre;
-    @Column(nullable = false )
+    @Column(nullable = false)
     private String apellido;
-    @Column(nullable = false , unique = true ) //nullable= false que no sea nulo , unique = true que sea unico
+    @Column(nullable = false, unique = true) // nullable= false que no sea nulo , unique = true que sea unico
     private String nombreUsuario;
-    @Column(nullable = false , unique = true )
+    @Column(nullable = false, unique = true)
     private String email;
-    @Column(nullable = false )
+    @Column(nullable = false)
     private String password;
-    @Column(nullable = false )
+    @Column(nullable = false)
     private boolean statusUsuario;
     private String direccion;
-    @Column(nullable = false )
+    @Column(nullable = false)
     private Date fechaCreacion;
     private int puntacion;
-
+    // Relaciones
     @ManyToOne()
     @JoinColumn(name = "id_comuna", nullable = false)
     private Comuna comuna;
@@ -55,6 +56,7 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Post> post;
 
+    // constructores
     public Usuario() {
     }
 
@@ -76,6 +78,7 @@ public class Usuario {
         this.servicio = servicio;
         this.canales = canales;
     }
+    // Getter y Setters
 
     public Integer getId() {
         return this.id;

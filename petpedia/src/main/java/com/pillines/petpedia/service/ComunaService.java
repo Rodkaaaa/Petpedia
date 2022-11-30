@@ -12,18 +12,19 @@ import com.pillines.petpedia.repository.ComunaRepository;
 @Service
 @Transactional
 public class ComunaService {
-    
-    private ComunaRepository comunaRepository; 
 
-    public ComunaService(ComunaRepository comunaRepository){
+    private ComunaRepository comunaRepository;
+
+    public ComunaService(ComunaRepository comunaRepository) {
         this.comunaRepository = comunaRepository;
     }
 
-    public void saveComuna(Comuna comuna){
+    // CRUD
+    public void saveComuna(Comuna comuna) {
         comunaRepository.save(comuna);
     }
 
-    public List<Comuna> getAll(){
+    public List<Comuna> getAll() {
         return (List<Comuna>) comunaRepository.findAll();
     }
 }

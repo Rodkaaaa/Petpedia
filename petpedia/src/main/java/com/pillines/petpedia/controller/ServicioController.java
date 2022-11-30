@@ -21,27 +21,27 @@ public class ServicioController {
 
     private ServicioService servicioService;
 
-    public ServicioController(@Autowired ServicioService servicioService){
+    public ServicioController(@Autowired ServicioService servicioService) {
         this.servicioService = servicioService;
     }
 
     @GetMapping("/servicio/getAll/")
-    public List<Servicio> findAll(){
+    public List<Servicio> findAll() {
         return servicioService.findAll();
     }
 
     @PutMapping("/servicio/update")
-    public void updateServicio(@RequestBody Servicio servicio){
+    public void updateServicio(@RequestBody Servicio servicio) {
         servicioService.updateServicio(servicio);
     }
 
     @DeleteMapping("/servicio/delete/{id}")
-    public void deleteServicio(@PathVariable("id") Integer id){
+    public void deleteServicio(@PathVariable("id") Integer id) {
         servicioService.deleteServicio(id);
     }
 
     @PostMapping("/servicio/save")
-    public void saveServicio(@RequestBody Servicio servicio){
+    public void saveServicio(@RequestBody Servicio servicio) {
         servicioService.saveServicio(servicio);
     }
 }
