@@ -12,26 +12,27 @@ import com.pillines.petpedia.repository.UsuarioRepository;
 @Service
 @Transactional
 public class UsuarioService {
-    
+
     private UsuarioRepository usuarioRepository;
 
-    public UsuarioService(UsuarioRepository usuarioRepository){
+    public UsuarioService(UsuarioRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
     }
 
-    public void saveUsuario(Usuario usuario){
+    // CRUD
+    public void saveUsuario(Usuario usuario) {
         usuarioRepository.save(usuario);
     }
 
-    public void updateUsuario(Usuario usuario){
+    public void updateUsuario(Usuario usuario) {
         usuarioRepository.save(usuario);
     }
 
-    public void deleteUsuario(Integer id){
+    public void deleteUsuario(Integer id) {
         usuarioRepository.deleteById(id);
     }
 
-    public List<Usuario> getAllUsuario(){
+    public List<Usuario> getAllUsuario() {
         return (List<Usuario>) usuarioRepository.findAll();
     }
 

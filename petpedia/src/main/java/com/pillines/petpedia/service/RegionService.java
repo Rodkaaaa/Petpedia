@@ -1,9 +1,6 @@
 package com.pillines.petpedia.service;
 
-
 import java.util.List;
-
-
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,23 +14,24 @@ public class RegionService {
 
     private RegionRepository regionRepository;
 
-    public RegionService(RegionRepository regionRepository){
+    public RegionService(RegionRepository regionRepository) {
         this.regionRepository = regionRepository;
     }
 
-    public List<Region> findAll(){
-        return (List<Region>)regionRepository.findAll();
+    // CRUD
+    public List<Region> findAll() {
+        return (List<Region>) regionRepository.findAll();
     }
 
-    public List<Region> findAll2(){
-        return (List<Region>)regionRepository.findAllRegions();
+    public List<Region> findAll2() {
+        return (List<Region>) regionRepository.findAllRegions();
     }
 
-    public void saveRegion(Region region){
+    public void saveRegion(Region region) {
         regionRepository.save(region);
     }
 
-    public void saveAllRegion(List<Region> region){
+    public void saveAllRegion(List<Region> region) {
         regionRepository.saveAll(region);
     }
 

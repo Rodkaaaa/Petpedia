@@ -17,29 +17,30 @@ import com.pillines.petpedia.service.CategoriaService;
 @RestController
 @CrossOrigin("*")
 public class CategoriaController {
-    
+
     private CategoriaService categoriaService;
 
-    public CategoriaController(@Autowired CategoriaService categoriaService){
+    public CategoriaController(@Autowired CategoriaService categoriaService) {
         this.categoriaService = categoriaService;
     }
 
     @PostMapping("/categoria/save")
-    public void saveCategoria(@RequestBody Categoria categoria){
+    public void saveCategoria(@RequestBody Categoria categoria) {
         categoriaService.saveCategoria(categoria);
     }
 
     @PutMapping("/categoria/update")
-    public void updateProvincia(@RequestBody Categoria categoria){
+    public void updateProvincia(@RequestBody Categoria categoria) {
         categoriaService.saveCategoria(categoria);
     }
+
     @PostMapping("/categoria/delete/{id}")
-    public void saveProvincia(@PathVariable("id") Integer id){
+    public void saveProvincia(@PathVariable("id") Integer id) {
         categoriaService.deleteCategoria(id);
     }
 
     @GetMapping("/categoria/getAll")
-    public List<Categoria> findAll(){
+    public List<Categoria> findAll() {
         return categoriaService.findAll();
     }
 }

@@ -13,20 +13,23 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+//clase
 @Entity(name = "comuna")
 public class Comuna {
+    // atributos
     @Id
     @GeneratedValue()
     private Integer idComuna;
     private String nombreComuna;
-
-    @ManyToOne(fetch = FetchType.EAGER )
+    // Relaciones
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_provincia")
     private Provincia provincia;
 
     @OneToMany(mappedBy = "comuna", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Usuario> usuario;
 
+    // constructores
     public Comuna() {
     }
 
@@ -35,6 +38,7 @@ public class Comuna {
         this.nombreComuna = nombreComuna;
         this.provincia = provincia;
     }
+    // Getter y Setters
 
     public Integer getId() {
         return this.idComuna;
