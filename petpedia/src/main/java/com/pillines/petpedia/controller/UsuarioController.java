@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.pillines.petpedia.model.Usuario;
-import com.pillines.petpedia.repository.UsuarioRepository;
 import com.pillines.petpedia.service.UsuarioService;
 
 @RestController
