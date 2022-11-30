@@ -1,37 +1,45 @@
-package com.example.pillines.petpedia.model;
+package com.pillines.petpedia.model;
 
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
-@Entity(name = "post") 
+//clase
+@Entity(name = "post")
 public class Post {
+    // atributos
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idPost", nullable = true)
+    @GeneratedValue()
     private Integer id;
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String titulo;
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String contenido;
-    @Column(name = "imgUrl")
     private String url;
-    @Column(nullable = true, name = "post_creacion")
+    @Column(nullable = false)
     private Date creacionPost;
-    @Column(nullable = true, name = "status_post")
     private boolean statusPost;
-    @Column(name = "puntuacion_post")
     private int puntuacion;
+    // Relaciones
+    @ManyToOne()
+    @JoinColumn(name = "id_usuario", nullable = false)
+    private Usuario usuario;
 
+    @ManyToOne()
+    @JoinColumn(name = "id_categoria", nullable = false)
+    private Categoria categoria;
 
+    // constructores
     public Post() {
     }
 
-    public Post(Integer id, String titulo, String contenido, String url, Date creacionPost, boolean statusPost, int puntuacion) {
+    public Post(Integer id, String titulo, String contenido, String url, Date creacionPost, boolean statusPost,
+            int puntuacion, Usuario usuario, Categoria categoria) {
         this.id = id;
         this.titulo = titulo;
         this.contenido = contenido;
@@ -39,7 +47,10 @@ public class Post {
         this.creacionPost = creacionPost;
         this.statusPost = statusPost;
         this.puntuacion = puntuacion;
+        this.usuario = usuario;
+        this.categoria = categoria;
     }
+    // Getter y Setters
 
     public Integer getId() {
         return this.id;
@@ -101,7 +112,20 @@ public class Post {
         this.puntuacion = puntuacion;
     }
 
+    public Usuario getUsuario() {
+        return this.usuario;
+    }
 
-    
-    
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Categoria getCategoria() {
+        return this.categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
 }

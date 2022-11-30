@@ -1,92 +1,93 @@
-package com.example.pillines.petpedia.model;
+package com.pillines.petpedia.model;
 
 import javax.persistence.Column;
 
-// HOLA A TODOS SOY YOOOOOOOOOOO
-// xdxd
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
+//clase
 @Entity(name = "comentario")
 
 public class Comentarios {
+    // atributos
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idComentarios", nullable = true)
+    @GeneratedValue()
     private Integer id;
-    @Column(name = "titulo_comentario", nullable = true)
+    @Column(nullable = false)
     private String tituloComentario;
+    @Column(nullable = false)
     private String comentarioText;
     private int statusComentario;
     private int puntacion;
+    // Relaciones
+    @ManyToOne()
+    @JoinColumn(name = "id_usuarios", nullable = false)
+    private Post post;
 
-    
+    // constructores
     public Comentarios() {
     }
 
-
-    public Comentarios(Integer id, String tituloComentario, String comentarioText, int statusComentario,
-            int puntacion) {
+    public Comentarios(Integer id, String tituloComentario, String comentarioText, int statusComentario, int puntacion,
+            Post post) {
         this.id = id;
         this.tituloComentario = tituloComentario;
         this.comentarioText = comentarioText;
         this.statusComentario = statusComentario;
         this.puntacion = puntacion;
+        this.post = post;
     }
-
+    // Getter y Setters
 
     public Integer getId() {
-        return id;
+        return this.id;
     }
-
 
     public void setId(Integer id) {
         this.id = id;
     }
 
-
     public String getTituloComentario() {
-        return tituloComentario;
+        return this.tituloComentario;
     }
-
 
     public void setTituloComentario(String tituloComentario) {
         this.tituloComentario = tituloComentario;
     }
 
-
     public String getComentarioText() {
-        return comentarioText;
+        return this.comentarioText;
     }
-
 
     public void setComentarioText(String comentarioText) {
         this.comentarioText = comentarioText;
     }
 
-
     public int getStatusComentario() {
-        return statusComentario;
+        return this.statusComentario;
     }
-
 
     public void setStatusComentario(int statusComentario) {
         this.statusComentario = statusComentario;
     }
 
-
     public int getPuntacion() {
-        return puntacion;
+        return this.puntacion;
     }
-
 
     public void setPuntacion(int puntacion) {
         this.puntacion = puntacion;
     }
 
+    public Post getPost() {
+        return this.post;
+    }
 
-    
+    public void setPost(Post post) {
+        this.post = post;
+    }
+
 }

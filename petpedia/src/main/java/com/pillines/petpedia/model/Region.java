@@ -1,37 +1,44 @@
-package com.example.pillines.petpedia.model;
+package com.pillines.petpedia.model;
 
-import javax.persistence.Column;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
+//clase
 @Entity(name = "region")
 public class Region {
+    // atributos
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(nullable = true, name = "idRegion")
-    private Integer id;
-    @Column(name = "nombre_region", unique = true, nullable = true)
+    @GeneratedValue()
+    private Integer idRegion;
     private String nombreRegion;
-    @Column(name = "ordinal", nullable = true, unique = true)
     private String ordinal;
+    // Relaciones
+    @OneToMany(mappedBy = "region", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Provincia> provincia;
 
+    // constructores
     public Region() {
     }
 
-    public Region(Integer id, String nombreRegion, String ordinal) {
-        this.id = id;
+    public Region(Integer idRegion, String nombreRegion, String ordinal) {
+        this.idRegion = idRegion;
         this.nombreRegion = nombreRegion;
         this.ordinal = ordinal;
     }
+    // Getter y Setters
 
     public Integer getId() {
-        return id;
+        return idRegion;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(Integer idRegion) {
+        this.idRegion = idRegion;
     }
 
     public String getNombreRegion() {
@@ -49,4 +56,5 @@ public class Region {
     public void setOrdinal(String ordinal) {
         this.ordinal = ordinal;
     }
+
 }

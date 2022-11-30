@@ -1,21 +1,31 @@
-package com.example.pillines.petpedia.model;
+package com.pillines.petpedia.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
+//clase
+@Entity()
 public class Canales {
-    //id
+    // atributos
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idCanales", nullable = true)
+    @GeneratedValue()
     private Integer id;
-    @Column(name = "nombre_canal", nullable = true, unique = true)
+    @Column(nullable = false, unique = true)
     private String nombreCanal;
-    @Column(name = "siglas", nullable = true)
+    @Column(nullable = false, unique = true)
     private String siglas;
-    
+    // relacion
+    @OneToMany(mappedBy = "canales", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Usuario> usuario;
+
+    // constructores
     public Canales() {
     }
 
@@ -25,6 +35,7 @@ public class Canales {
         this.siglas = siglas;
     }
 
+    // Getter y Setters
     public Integer getId() {
         return id;
     }
@@ -48,5 +59,5 @@ public class Canales {
     public void setSiglas(String siglas) {
         this.siglas = siglas;
     }
-    
+
 }

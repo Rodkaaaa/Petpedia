@@ -1,44 +1,68 @@
-package com.example.pillines.petpedia.model;
+package com.pillines.petpedia.model;
 
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
+//clase
 @Entity(name = "usuario")
-class Usuario {
-
+public class Usuario {
+    // atributos
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idUsuario",nullable = true)
+    @GeneratedValue()
     private Integer id;
     @Column(nullable = false)
     private String nombre;
     @Column(nullable = false)
     private String apellido;
-    @Column(name = "nombre_usuario",nullable = false)
+    @Column(nullable = false, unique = true) // nullable= false que no sea nulo , unique = true que sea unico
     private String nombreUsuario;
-    @Column(nullable = true)
+    @Column(nullable = false, unique = true)
     private String email;
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String password;
-    @Column(name = "status_usuario",nullable = true)
+    @Column(nullable = false)
     private boolean statusUsuario;
-    @Column(name = "usuario_direccion",nullable = true)
     private String direccion;
-    @Column(name = "usuario_creacion",nullable = true)
+    @Column(nullable = false)
     private Date fechaCreacion;
-    @Column()
     private int puntacion;
+    // Relaciones
+    @ManyToOne()
+    @JoinColumn(name = "id_comuna", nullable = false)
+    private Comuna comuna;
 
+    @ManyToOne()
+    @JoinColumn(name = "id_tipo_usuario", nullable = false)
+    private TipoUsuario tipoUsuario;
 
+    @ManyToOne()
+    @JoinColumn(name = "id_servicios", nullable = false)
+    private Servicio servicio;
+
+    @ManyToOne()
+    @JoinColumn(name = "id_canales", nullable = false)
+    private Canales canales;
+
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Post> post;
+
+    // constructores
     public Usuario() {
     }
 
-    public Usuario(Integer id, String nombre, String apellido, String nombreUsuario, String email, String password, boolean statusUsuario, String direccion, Date fechaCreacion, int puntacion) {
+    public Usuario(Integer id, String nombre, String apellido, String nombreUsuario, String email, String password,
+            boolean statusUsuario, String direccion, Date fechaCreacion, int puntacion, Comuna comuna,
+            TipoUsuario tipoUsuario, Servicio servicio, Canales canales) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -49,7 +73,12 @@ class Usuario {
         this.direccion = direccion;
         this.fechaCreacion = fechaCreacion;
         this.puntacion = puntacion;
+        this.comuna = comuna;
+        this.tipoUsuario = tipoUsuario;
+        this.servicio = servicio;
+        this.canales = canales;
     }
+    // Getter y Setters
 
     public Integer getId() {
         return this.id;
@@ -135,5 +164,36 @@ class Usuario {
         this.puntacion = puntacion;
     }
 
+    public Comuna getComuna() {
+        return this.comuna;
+    }
+
+    public void setComuna(Comuna comuna) {
+        this.comuna = comuna;
+    }
+
+    public TipoUsuario getTipoUsuario() {
+        return this.tipoUsuario;
+    }
+
+    public void setTipoUsuario(TipoUsuario tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
+    }
+
+    public Servicio getServicio() {
+        return this.servicio;
+    }
+
+    public void setServicio(Servicio servicio) {
+        this.servicio = servicio;
+    }
+
+    public Canales getCanales() {
+        return this.canales;
+    }
+
+    public void setCanales(Canales canales) {
+        this.canales = canales;
+    }
 
 }

@@ -1,4 +1,4 @@
-package com.example.pillines.petpedia;
+package com.pillines.petpedia;
 
 
 import org.springframework.boot.SpringApplication;
