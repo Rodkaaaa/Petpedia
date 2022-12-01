@@ -1,0 +1,214 @@
+[
+    {
+        "nombreProvicia": "Arica",
+        "region": {"id": "1"}
+    },
+    {
+        "nombreProvicia": "Parinacota",
+        "region": {"id": "1"}
+    },
+    {
+        "nombreProvicia": "Iquique",
+        "region": {"id": "2"}
+    },
+    {
+        "nombreProvicia": "El Tamarugal",
+        "region": {"id": "2"}
+    },
+    {
+        "nombreProvicia": "Antofagasta",
+        "region": {"id": "3"}
+    },
+    {
+        "nombreProvicia": "El Loa",
+        "region": {"id": "3"}
+    },
+    {
+        "nombreProvicia": "Tocopilla",
+        "region": {"id": "3"}
+    },
+    {
+        "nombreProvicia": "Chañaral",
+        "region": {"id": "4"}
+    },
+    {
+        "nombreProvicia": "Copiapó",
+        "region": {"id": "4"}
+    },
+    {
+        "nombreProvicia": "Huasco",
+        "region": {"id": "4"}
+    },
+    {
+        "nombreProvicia": "Choapa",
+        "region": {"id": "5"}
+    },
+    {
+        "nombreProvicia": "Elqui",
+        "region": {"id": "5"}
+    },
+    {
+        "nombreProvicia": "Limarí",
+        "region": {"id": "5"}
+    },
+    {
+        "nombreProvicia": "Isla de Pascua",
+        "region": {"id": "6"}
+    },
+    {
+        "nombreProvicia": "Los Andes",
+        "region": {"id": "6"}
+    },
+    {
+        "nombreProvicia": "Petorca",
+        "region": {"id": "6"}
+    },
+    {
+        "nombreProvicia": "Quillota",
+        "region": {"id": "6"}
+    },
+    {
+        "nombreProvicia": "San Antonio",
+        "region": {"id": "6"}
+    },
+    {
+        "nombreProvicia": "San Felipe de Aconcagua",
+        "region": {"id": "6"}
+    },
+    {
+        "nombreProvicia": "Valparaiso",
+        "region": {"id": "6"}
+    },
+    {
+        "nombreProvicia": "Chacabuco",
+        "region": {"id": "7"}
+    },
+    {
+        "nombreProvicia": "Cordillera",
+        "region": {"id": "7"}
+    },
+    {
+        "nombreProvicia": "Maipo",
+        "region": {"id": "7"}
+    },
+    {
+        "nombreProvicia": "Melipilla",
+        "region": {"id": "7"}
+    },
+    {
+        "nombreProvicia": "Santiago",
+        "region": {"id": "7"}
+    },
+    {
+        "nombreProvicia": "Talagante",
+        "region": {"id": "7"}
+    },
+    {
+        "nombreProvicia": "Cachapoal",
+        "region": {"id": "8"}
+    },
+    {
+        "nombreProvicia": "Cardenal Caro",
+        "region": {"id": "8"}
+    },
+    {
+        "nombreProvicia": "Colchagua",
+        "region": {"id": "8"}
+    },
+    {
+        "nombreProvicia": "Cauquenes",
+        "region": {"id": "9"}
+    },
+    {
+        "nombreProvicia": "Curicó",
+        "region": {"id": "9"}
+    },
+    {
+        "nombreProvicia": "Linares",
+        "region": {"id": "9"}
+    },
+    {
+        "nombreProvicia": "Talca",
+        "region": {"id": "9"}
+    },
+    {
+        "nombreProvicia": "Arauco",
+        "region": {"id": "10"}
+    },
+    {
+        "nombreProvicia": "Bio Bío",
+        "region": {"id": "10"}
+    },
+    {
+        "nombreProvicia": "Concepción",
+        "region": {"id": "10"}
+    },
+    {
+        "nombreProvicia": "Ñuble",
+        "region": {"id": "10"}
+    },
+    {
+        "nombreProvicia": "Cautín",
+        "region": {"id": "11"}
+    },
+    {
+        "nombreProvicia": "Malleco",
+        "region": {"id": "11"}
+    },
+    {
+        "nombreProvicia": "Valdivia",
+        "region": {"id": "12"}
+    },
+    {
+        "nombreProvicia": "Ranco",
+        "region": {"id": "12"}
+    },
+    {
+        "nombreProvicia": "Chiloé",
+        "region": {"id": "13"}
+    },
+    {
+        "nombreProvicia": "Llanquihue",
+        "region": {"id": "13"}
+    },
+    {
+        "nombreProvicia": "Osorno",
+        "region": {"id": "13"}
+    },
+    {
+        "nombreProvicia": "Palena",
+        "region": {"id": "13"}
+    },
+    {
+        "nombreProvicia": "Aisén",
+        "region": {"id": "14"}
+    },
+    {
+        "nombreProvicia": "Capitán Prat",
+        "region": {"id": "14"}
+    },
+    {
+        "nombreProvicia": "Coihaique",
+        "region": {"id": "14"}
+    },
+    {
+        "nombreProvicia": "General Carrera",
+        "region": {"id": "14"}
+    },
+    {
+        "nombreProvicia": "Antártica Chilena",
+        "region": {"id": "15"}
+    },
+    {
+        "nombreProvicia": "Magallanes",
+        "region": {"id": "15"}
+    },
+    {
+        "nombreProvicia": "Tierra del Fuego",
+        "region": {"id": "15"}
+    },
+    {
+        "nombreProvicia": "Última Esperanza",
+        "region": {"id": "15"}
+    }
+]
