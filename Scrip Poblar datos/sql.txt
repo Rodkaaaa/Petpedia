@@ -420,3 +420,26 @@ VALUES
 	(343,'Timaukel',52),
 	(344,'Natales',53),
 	(345,'Torres del Paine',53);
+
+INSERT INTO `servicio` (`id`,`tipo_servicio`,`descripcion`)
+VALUES
+	(1,'Atención 24 hora','Veterinarias'),
+    (2,'Laboratorio y exámenes imagenológicos','Veterinarias'),
+    (3,'Atencion a Animales exóticos','Veterinarias'),
+    (4,'Venta de medicamentos','Veterinarias'),
+    (5,'Venta de alimentos','Veterinarias'),
+    (6,'Atención a domicilio','Veterinarias'),
+    (7,'Venta de accesorios y juguetes','Veterinarias'),
+    (8,'Animales exóticos','Especialidades'),
+    (9,'Medicina felina','Especialidades'),
+    (10,'Medicina canina','Especialidades'),
+    (11,'Nefrología','Especialidades'),
+    (12,'Dermatología','Especialidades'),
+    (13,'Cardiología','Especialidades'),
+    (14,'Oncología','Especialidades'),
+    (15,'Odontología','Especialidades'),
+    (16,'Oftalmología','Especialidades'),
+    (17,'Traumatología','Especialidades'),
+    (18,'Neurología','Especialidades'),
+    (19,'Fisioterapia y rehabilitación','Especialidades'),
+    (20,'Etología','Especialidades');

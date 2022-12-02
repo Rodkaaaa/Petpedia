@@ -20,7 +20,7 @@ public class Servicio {
     private Integer id;
     @Column(nullable = false, unique = true)
     private String tipoServicio;
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String descripcion;
     // Relaciones
     @OneToMany(mappedBy = "servicio", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
