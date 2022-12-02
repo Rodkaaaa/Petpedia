@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "tipoUsuario": "Rol_Admin"
+    },
+    {
+        "id": 2,
+        "tipoUsuario": "Rol_user"
+    },
+    {
+        "id": 3,
+        "tipoUsuario": "Rol_vet"
+    },
+    {
+        "id": 4,
+        "tipoUsuario": "Rol_esp"
+    }
+]
