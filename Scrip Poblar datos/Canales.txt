@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "nombreCanal": "Instagram",
+        "siglas": "IN"
+    },
+    {
+        "id": 2,
+        "nombreCanal": "Facebook",
+        "siglas": "FB"
+    },
+    {
+        "id": 3,
+        "nombreCanal": "Twitter",
+        "siglas": "TW"
+    },
+    {
+        "id": 4,
+        "nombreCanal": "LinkedIn",
+        "siglas": "LK"
+    },
+    {
+        "id": 5,
+        "nombreCanal": "TikToK",
+        "siglas": "TK"
+    },
+    {
+        "id": 6,
+        "nombreCanal": "WhatsApp",
+        "siglas": "WS"
+    },
+    {
+        "id": 7,
+        "nombreCanal": "Telegram",
+        "siglas": "TL"
+    },
+    {
+        "id": 8,
+        "nombreCanal": "Viber",
+        "siglas": "VB"
+    },
+    {
+        "id": 9,
+        "nombreCanal": "LINE",
+        "siglas": "LN"
+    },
+    {
+        "id": 10,
+        "nombreCanal": "Messenger",
+        "siglas": "MS"
+    },
+    {
+        "id": 11,
+        "nombreCanal": "WeChat",
+        "siglas": "WC"
+    },
+    {
+        "id": 12,
+        "nombreCanal": "QQ",
+        "siglas": "QQ"
+    },
+    {
+        "id": 13,
+        "nombreCanal": "Pinterest",
+        "siglas": "PR"
+    },
+    {
+        "id": 14,
+        "nombreCanal": "Snapchat",
+        "siglas": "SC"
+    },
+    {
+        "id": 15,
+        "nombreCanal": "Tagged",
+        "siglas": "TG"
+    },
+    {
+        "id": 16,
+        "nombreCanal": "Fotki",
+        "siglas": "FK"
+    },
+    {
+        "id": 17,
+        "nombreCanal": "500px",
+        "siglas": "5P"
+    },
+    {
+        "id": 18,
+        "nombreCanal": "Dribbble",
+        "siglas": "DB"
+    },
+    {
+        "id": 19,
+        "nombreCanal": "Flickr",
+        "siglas": "FL"
+    },
+    {
+        "id": 20,
+        "nombreCanal": "EyeEm",
+        "siglas": "EE"
+    },
+    {
+        "id": 21,
+        "nombreCanal": "Weheartit",
+        "siglas": "WH"
+    },
+    {
+        "id": 22,
+        "nombreCanal": "Behance",
+        "siglas": "BH"
+    },
+    {
+        "id": 23,
+        "nombreCanal": "YouTube",
+        "siglas": "YT"
+    },
+    {
+        "id": 24,
+        "nombreCanal": "Vimeo",
+        "siglas": "VM"
+    },
+    {
+        "id": 25,
+        "nombreCanal": "Funnyordie",
+        "siglas": "FY"
+    },
+    {
+        "id": 26,
+        "nombreCanal": "Dailymotion",
+        "siglas": "DM"
+    },
+    {
+        "id": 27,
+        "nombreCanal": "Cross.TV",
+        "siglas": "CT"
+    },
+    {
+        "id": 28,
+        "nombreCanal": "Twitch.tv",
+        "siglas": "TT"
+    },
+    {
+        "id": 29,
+        "nombreCanal": "BeBee",
+        "siglas": "BB"
+    },
+    {
+        "id": 30,
+        "nombreCanal": "XING",
+        "siglas": "XI"
+    }
+]
