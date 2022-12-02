@@ -477,3 +477,11 @@ VALUES
 	(28,'Twitch.tv','TT'),
 	(29,'BeBee','BB'),
 	(30,'XING','XI');
+
+
+ INSERT INTO `tipo_usuario` (`id`,`tipo_usuario`)
+VALUES
+	(1,'Rol_Admin'),
+	(2,'Rol_user'),
+    	(3,'Rol_vet'),
+    	(4,'Rol_esp');
