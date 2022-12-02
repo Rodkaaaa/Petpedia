@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "tipoServicio": "Atención 24 hora",
+        "descripcion": "Veterinarias"
+    },
+    {
+        "id": 2,
+        "tipoServicio": "Laboratorio y exámenes imagenológicos",
+        "descripcion": "Veterinarias"
+    },
+    {
+        "id": 3,
+        "tipoServicio": "Atencion a Animales exóticos",
+        "descripcion": "Veterinarias"
+    },
+    {
+        "id": 4,
+        "tipoServicio": "Venta de medicamentos",
+        "descripcion": "Veterinarias"
+    },
+    {
+        "id": 5,
+        "tipoServicio": "Venta de alimentos",
+        "descripcion": "Veterinarias"
+    },
+    {
+        "id": 6,
+        "tipoServicio": "Atención a domicilio",
+        "descripcion": "Veterinarias"
+    },
+    {
+        "id": 7,
+        "tipoServicio": "Venta de accesorios y juguetes",
+        "descripcion": "Veterinarias"
+    },
+    {
+        "id": 8,
+        "tipoServicio": "Animales exóticos",
+        "descripcion": "Especialidades"
+    },
+    {
+        "id": 9,
+        "tipoServicio": "Medicina felina",
+        "descripcion": "Especialidades"
+    },
+    {
+        "id": 10,
+        "tipoServicio": "Medicina canina",
+        "descripcion": "Especialidades"
+    },
+    {
+        "id": 11,
+        "tipoServicio": "Nefrología",
+        "descripcion": "Especialidades"
+    },
+    {
+        "id": 12,
+        "tipoServicio": "Dermatología",
+        "descripcion": "Especialidades"
+    },
+    {
+        "id": 13,
+        "tipoServicio": "Cardiología",
+        "descripcion": "Especialidades"
+    },
+    {
+        "id": 14,
+        "tipoServicio": "Oncología",
+        "descripcion": "Especialidades"
+    },
+    {
+        "id": 15,
+        "tipoServicio": "Odontología",
+        "descripcion": "Especialidades"
+    },
+    {
+        "id": 16,
+        "tipoServicio": "Oftalmología",
+        "descripcion": "Especialidades"
+    },
+    {
+        "id": 17,
+        "tipoServicio": "Traumatología",
+        "descripcion": "Especialidades"
+    },
+    {
+        "id": 18,
+        "tipoServicio": "Neurología",
+        "descripcion": "Especialidades"
+    },
+    {
+        "id": 19,
+        "tipoServicio": "Fisioterapia y rehabilitación",
+        "descripcion": "Especialidades"
+    },
+    {
+        "id": 20,
+        "tipoServicio": "Etología",
+        "descripcion": "Especialidades"
+    }
+]
