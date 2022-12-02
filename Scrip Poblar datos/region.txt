@@ -1,62 +1,77 @@
 [
     {
         "nombreRegion": "Arica y Parinacota",
-        "ordinal": "XV"
+        "ordinal": "XV",
+        "id": 1
     },
     {
         "nombreRegion": "Tarapacá",
-        "ordinal": "I"
+        "ordinal": "I",
+        "id": 2
     },
     {
         "nombreRegion": "Antofagasta",
-        "ordinal": "II"
+        "ordinal": "II",
+        "id": 3
     },
     {
         "nombreRegion": "Atacama",
-        "ordinal": "III"
+        "ordinal": "III",
+        "id": 4
     },
     {
         "nombreRegion": "Coquimbo",
-        "ordinal": "IV"
+        "ordinal": "IV",
+        "id": 5
     },
     {
         "nombreRegion": "Valparaiso",
-        "ordinal": "V"
+        "ordinal": "V",
+        "id": 6
     },
     {
         "nombreRegion": "Metropolitana de Santiago",
-        "ordinal": "RM"
+        "ordinal": "RM",
+        "id": 7
     },
     {
-        "nombreRegion": "Libertador General Bernardo O'Higgins" ,
-        "ordinal":"VI"
+        "nombreRegion": "Libertador General Bernardo O'Higgins",
+        "ordinal": "VI",
+        "id": 8
     },
     {
         "nombreRegion": "Maule",
-        "ordinal": "VII"
+        "ordinal": "VII",
+        "id": 9
     },
     {
         "nombreRegion": "Biobío",
-        "ordinal": "VIII"
+        "ordinal": "VIII",
+        "id": 10
     },
     {
         "nombreRegion": "La Araucanía",
-        "ordinal": "IX"
+        "ordinal": "IX",
+        "id": 11
     },
     {
         "nombreRegion": "Los Ríos",
-        "ordinal": "XIV"
+        "ordinal": "XIV",
+        "id": 12
     },
     {
         "nombreRegion": "Los Lagos",
-        "ordinal": "X"
+        "ordinal": "X",
+        "id": 13
     },
     {
         "nombreRegion": "Aisén del General Carlos Ibáñez del Campo",
-        "ordinal": "XI"
+        "ordinal": "XI",
+        "id": 14
     },
     {
         "nombreRegion": "Magallanes y de la Antártica Chilena",
-        "ordinal": "XII"
+        "ordinal": "XII",
+        "id": 15
     }
 ]
