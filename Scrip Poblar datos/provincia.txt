@@ -1,214 +1,479 @@
 [
     {
-        "nombreProvicia": "Arica",
-        "region": {"id": "1"}
+        "nombreProvincia": "Arica",
+        "region": {
+            "nombreRegion": "Arica y Parinacota",
+            "ordinal": "XV",
+            "id": 1
+        },
+        "id": 1
     },
     {
-        "nombreProvicia": "Parinacota",
-        "region": {"id": "1"}
+        "nombreProvincia": "Parinacota",
+        "region": {
+            "nombreRegion": "Arica y Parinacota",
+            "ordinal": "XV",
+            "id": 1
+        },
+        "id": 2
     },
     {
-        "nombreProvicia": "Iquique",
-        "region": {"id": "2"}
+        "nombreProvincia": "Iquique",
+        "region": {
+            "nombreRegion": "Tarapacá",
+            "ordinal": "I",
+            "id": 2
+        },
+        "id": 3
     },
     {
-        "nombreProvicia": "El Tamarugal",
-        "region": {"id": "2"}
+        "nombreProvincia": "El Tamarugal",
+        "region": {
+            "nombreRegion": "Tarapacá",
+            "ordinal": "I",
+            "id": 2
+        },
+        "id": 4
     },
     {
-        "nombreProvicia": "Antofagasta",
-        "region": {"id": "3"}
+        "nombreProvincia": "Antofagasta",
+        "region": {
+            "nombreRegion": "Antofagasta",
+            "ordinal": "II",
+            "id": 3
+        },
+        "id": 5
     },
     {
-        "nombreProvicia": "El Loa",
-        "region": {"id": "3"}
+        "nombreProvincia": "El Loa",
+        "region": {
+            "nombreRegion": "Antofagasta",
+            "ordinal": "II",
+            "id": 3
+        },
+        "id": 6
     },
     {
-        "nombreProvicia": "Tocopilla",
-        "region": {"id": "3"}
+        "nombreProvincia": "Tocopilla",
+        "region": {
+            "nombreRegion": "Antofagasta",
+            "ordinal": "II",
+            "id": 3
+        },
+        "id": 7
     },
     {
-        "nombreProvicia": "Chañaral",
-        "region": {"id": "4"}
+        "nombreProvincia": "Chañaral",
+        "region": {
+            "nombreRegion": "Atacama",
+            "ordinal": "III",
+            "id": 4
+        },
+        "id": 8
     },
     {
-        "nombreProvicia": "Copiapó",
-        "region": {"id": "4"}
+        "nombreProvincia": "Copiapó",
+        "region": {
+            "nombreRegion": "Atacama",
+            "ordinal": "III",
+            "id": 4
+        },
+        "id": 9
     },
     {
-        "nombreProvicia": "Huasco",
-        "region": {"id": "4"}
+        "nombreProvincia": "Huasco",
+        "region": {
+            "nombreRegion": "Atacama",
+            "ordinal": "III",
+            "id": 4
+        },
+        "id": 10
     },
     {
-        "nombreProvicia": "Choapa",
-        "region": {"id": "5"}
+        "nombreProvincia": "Choapa",
+        "region": {
+            "nombreRegion": "Coquimbo",
+            "ordinal": "IV",
+            "id": 5
+        },
+        "id": 11
     },
     {
-        "nombreProvicia": "Elqui",
-        "region": {"id": "5"}
+        "nombreProvincia": "Elqui",
+        "region": {
+            "nombreRegion": "Coquimbo",
+            "ordinal": "IV",
+            "id": 5
+        },
+        "id": 12
     },
     {
-        "nombreProvicia": "Limarí",
-        "region": {"id": "5"}
+        "nombreProvincia": "Limarí",
+        "region": {
+            "nombreRegion": "Coquimbo",
+            "ordinal": "IV",
+            "id": 5
+        },
+        "id": 13
     },
     {
-        "nombreProvicia": "Isla de Pascua",
-        "region": {"id": "6"}
+        "nombreProvincia": "Isla de Pascua",
+        "region": {
+            "nombreRegion": "Valparaiso",
+            "ordinal": "V",
+            "id": 6
+        },
+        "id": 14
     },
     {
-        "nombreProvicia": "Los Andes",
-        "region": {"id": "6"}
+        "nombreProvincia": "Los Andes",
+        "region": {
+            "nombreRegion": "Valparaiso",
+            "ordinal": "V",
+            "id": 6
+        },
+        "id": 15
     },
     {
-        "nombreProvicia": "Petorca",
-        "region": {"id": "6"}
+        "nombreProvincia": "Petorca",
+        "region": {
+            "nombreRegion": "Valparaiso",
+            "ordinal": "V",
+            "id": 6
+        },
+        "id": 16
     },
     {
-        "nombreProvicia": "Quillota",
-        "region": {"id": "6"}
+        "nombreProvincia": "Quillota",
+        "region": {
+            "nombreRegion": "Valparaiso",
+            "ordinal": "V",
+            "id": 6
+        },
+        "id": 17
     },
     {
-        "nombreProvicia": "San Antonio",
-        "region": {"id": "6"}
+        "nombreProvincia": "San Antonio",
+        "region": {
+            "nombreRegion": "Valparaiso",
+            "ordinal": "V",
+            "id": 6
+        },
+        "id": 18
     },
     {
-        "nombreProvicia": "San Felipe de Aconcagua",
-        "region": {"id": "6"}
+        "nombreProvincia": "San Felipe de Aconcagua",
+        "region": {
+            "nombreRegion": "Valparaiso",
+            "ordinal": "V",
+            "id": 6
+        },
+        "id": 19
     },
     {
-        "nombreProvicia": "Valparaiso",
-        "region": {"id": "6"}
+        "nombreProvincia": "Valparaiso",
+        "region": {
+            "nombreRegion": "Valparaiso",
+            "ordinal": "V",
+            "id": 6
+        },
+        "id": 20
     },
     {
-        "nombreProvicia": "Chacabuco",
-        "region": {"id": "7"}
+        "nombreProvincia": "Chacabuco",
+        "region": {
+            "nombreRegion": "Metropolitana de Santiago",
+            "ordinal": "RM",
+            "id": 7
+        },
+        "id": 21
     },
     {
-        "nombreProvicia": "Cordillera",
-        "region": {"id": "7"}
+        "nombreProvincia": "Cordillera",
+        "region": {
+            "nombreRegion": "Metropolitana de Santiago",
+            "ordinal": "RM",
+            "id": 7
+        },
+        "id": 22
     },
     {
-        "nombreProvicia": "Maipo",
-        "region": {"id": "7"}
+        "nombreProvincia": "Maipo",
+        "region": {
+            "nombreRegion": "Metropolitana de Santiago",
+            "ordinal": "RM",
+            "id": 7
+        },
+        "id": 23
     },
     {
-        "nombreProvicia": "Melipilla",
-        "region": {"id": "7"}
+        "nombreProvincia": "Melipilla",
+        "region": {
+            "nombreRegion": "Metropolitana de Santiago",
+            "ordinal": "RM",
+            "id": 7
+        },
+        "id": 24
     },
     {
-        "nombreProvicia": "Santiago",
-        "region": {"id": "7"}
+        "nombreProvincia": "Santiago",
+        "region": {
+            "nombreRegion": "Metropolitana de Santiago",
+            "ordinal": "RM",
+            "id": 7
+        },
+        "id": 25
     },
     {
-        "nombreProvicia": "Talagante",
-        "region": {"id": "7"}
+        "nombreProvincia": "Talagante",
+        "region": {
+            "nombreRegion": "Metropolitana de Santiago",
+            "ordinal": "RM",
+            "id": 7
+        },
+        "id": 26
     },
     {
-        "nombreProvicia": "Cachapoal",
-        "region": {"id": "8"}
+        "nombreProvincia": "Cachapoal",
+        "region": {
+            "nombreRegion": "Libertador General Bernardo O'Higgins",
+            "ordinal": "VI",
+            "id": 8
+        },
+        "id": 27
     },
     {
-        "nombreProvicia": "Cardenal Caro",
-        "region": {"id": "8"}
+        "nombreProvincia": "Cardenal Caro",
+        "region": {
+            "nombreRegion": "Libertador General Bernardo O'Higgins",
+            "ordinal": "VI",
+            "id": 8
+        },
+        "id": 28
     },
     {
-        "nombreProvicia": "Colchagua",
-        "region": {"id": "8"}
+        "nombreProvincia": "Colchagua",
+        "region": {
+            "nombreRegion": "Libertador General Bernardo O'Higgins",
+            "ordinal": "VI",
+            "id": 8
+        },
+        "id": 29
     },
     {
-        "nombreProvicia": "Cauquenes",
-        "region": {"id": "9"}
+        "nombreProvincia": "Cauquenes",
+        "region": {
+            "nombreRegion": "Maule",
+            "ordinal": "VII",
+            "id": 9
+        },
+        "id": 30
     },
     {
-        "nombreProvicia": "Curicó",
-        "region": {"id": "9"}
+        "nombreProvincia": "Curicó",
+        "region": {
+            "nombreRegion": "Maule",
+            "ordinal": "VII",
+            "id": 9
+        },
+        "id": 31
     },
     {
-        "nombreProvicia": "Linares",
-        "region": {"id": "9"}
+        "nombreProvincia": "Linares",
+        "region": {
+            "nombreRegion": "Maule",
+            "ordinal": "VII",
+            "id": 9
+        },
+        "id": 32
     },
     {
-        "nombreProvicia": "Talca",
-        "region": {"id": "9"}
+        "nombreProvincia": "Talca",
+        "region": {
+            "nombreRegion": "Maule",
+            "ordinal": "VII",
+            "id": 9
+        },
+        "id": 33
     },
     {
-        "nombreProvicia": "Arauco",
-        "region": {"id": "10"}
+        "nombreProvincia": "Arauco",
+        "region": {
+            "nombreRegion": "Biobío",
+            "ordinal": "VIII",
+            "id": 10
+        },
+        "id": 34
     },
     {
-        "nombreProvicia": "Bio Bío",
-        "region": {"id": "10"}
+        "nombreProvincia": "Bio Bío",
+        "region": {
+            "nombreRegion": "Biobío",
+            "ordinal": "VIII",
+            "id": 10
+        },
+        "id": 35
     },
     {
-        "nombreProvicia": "Concepción",
-        "region": {"id": "10"}
+        "nombreProvincia": "Concepción",
+        "region": {
+            "nombreRegion": "Biobío",
+            "ordinal": "VIII",
+            "id": 10
+        },
+        "id": 36
     },
     {
-        "nombreProvicia": "Ñuble",
-        "region": {"id": "10"}
+        "nombreProvincia": "Ñuble",
+        "region": {
+            "nombreRegion": "Biobío",
+            "ordinal": "VIII",
+            "id": 10
+        },
+        "id": 37
     },
     {
-        "nombreProvicia": "Cautín",
-        "region": {"id": "11"}
+        "nombreProvincia": "Cautín",
+        "region": {
+            "nombreRegion": "La Araucanía",
+            "ordinal": "IX",
+            "id": 11
+        },
+        "id": 38
     },
     {
-        "nombreProvicia": "Malleco",
-        "region": {"id": "11"}
+        "nombreProvincia": "Malleco",
+        "region": {
+            "nombreRegion": "La Araucanía",
+            "ordinal": "IX",
+            "id": 11
+        },
+        "id": 39
     },
     {
-        "nombreProvicia": "Valdivia",
-        "region": {"id": "12"}
+        "nombreProvincia": "Valdivia",
+        "region": {
+            "nombreRegion": "Los Ríos",
+            "ordinal": "XIV",
+            "id": 12
+        },
+        "id": 40
     },
     {
-        "nombreProvicia": "Ranco",
-        "region": {"id": "12"}
+        "nombreProvincia": "Ranco",
+        "region": {
+            "nombreRegion": "Los Ríos",
+            "ordinal": "XIV",
+            "id": 12
+        },
+        "id": 41
     },
     {
-        "nombreProvicia": "Chiloé",
-        "region": {"id": "13"}
+        "nombreProvincia": "Chiloé",
+        "region": {
+            "nombreRegion": "Los Lagos",
+            "ordinal": "X",
+            "id": 13
+        },
+        "id": 42
     },
     {
-        "nombreProvicia": "Llanquihue",
-        "region": {"id": "13"}
+        "nombreProvincia": "Llanquihue",
+        "region": {
+            "nombreRegion": "Los Lagos",
+            "ordinal": "X",
+            "id": 13
+        },
+        "id": 43
     },
     {
-        "nombreProvicia": "Osorno",
-        "region": {"id": "13"}
+        "nombreProvincia": "Osorno",
+        "region": {
+            "nombreRegion": "Los Lagos",
+            "ordinal": "X",
+            "id": 13
+        },
+        "id": 44
     },
     {
-        "nombreProvicia": "Palena",
-        "region": {"id": "13"}
+        "nombreProvincia": "Palena",
+        "region": {
+            "nombreRegion": "Los Lagos",
+            "ordinal": "X",
+            "id": 13
+        },
+        "id": 45
     },
     {
-        "nombreProvicia": "Aisén",
-        "region": {"id": "14"}
+        "nombreProvincia": "Aisén",
+        "region": {
+            "nombreRegion": "Aisén del General Carlos Ibáñez del Campo",
+            "ordinal": "XI",
+            "id": 14
+        },
+        "id": 46
     },
     {
-        "nombreProvicia": "Capitán Prat",
-        "region": {"id": "14"}
+        "nombreProvincia": "Capitán Prat",
+        "region": {
+            "nombreRegion": "Aisén del General Carlos Ibáñez del Campo",
+            "ordinal": "XI",
+            "id": 14
+        },
+        "id": 47
     },
     {
-        "nombreProvicia": "Coihaique",
-        "region": {"id": "14"}
+        "nombreProvincia": "Coihaique",
+        "region": {
+            "nombreRegion": "Aisén del General Carlos Ibáñez del Campo",
+            "ordinal": "XI",
+            "id": 14
+        },
+        "id": 48
     },
     {
-        "nombreProvicia": "General Carrera",
-        "region": {"id": "14"}
+        "nombreProvincia": "General Carrera",
+        "region": {
+            "nombreRegion": "Aisén del General Carlos Ibáñez del Campo",
+            "ordinal": "XI",
+            "id": 14
+        },
+        "id": 49
     },
     {
-        "nombreProvicia": "Antártica Chilena",
-        "region": {"id": "15"}
+        "nombreProvincia": "Antártica Chilena",
+        "region": {
+            "nombreRegion": "Magallanes y de la Antártica Chilena",
+            "ordinal": "XII",
+            "id": 15
+        },
+        "id": 50
     },
     {
-        "nombreProvicia": "Magallanes",
-        "region": {"id": "15"}
+        "nombreProvincia": "Magallanes",
+        "region": {
+            "nombreRegion": "Magallanes y de la Antártica Chilena",
+            "ordinal": "XII",
+            "id": 15
+        },
+        "id": 51
     },
     {
-        "nombreProvicia": "Tierra del Fuego",
-        "region": {"id": "15"}
+        "nombreProvincia": "Tierra del Fuego",
+        "region": {
+            "nombreRegion": "Magallanes y de la Antártica Chilena",
+            "ordinal": "XII",
+            "id": 15
+        },
+        "id": 52
     },
     {
-        "nombreProvicia": "Última Esperanza",
-        "region": {"id": "15"}
+        "nombreProvincia": "Última Esperanza",
+        "region": {
+            "nombreRegion": "Magallanes y de la Antártica Chilena",
+            "ordinal": "XII",
+            "id": 15
+        },
+        "id": 53
     }
 ]
