@@ -18,8 +18,9 @@ public class Canales {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    // que mi dato no nulo y que unico
     @Column(nullable = false, unique = true)
-    private String nombreCanal;
+    private String nombreCanal;// nombre_canal
     @Column(nullable = false, unique = true)
     private String siglas;
     // relacion
