@@ -53,7 +53,7 @@ public class Usuario {
     @ManyToOne()
     @JoinColumn(name = "id_canales", nullable = false)
     private Canales canales;
-
+    // no va dentro del constructor
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Post> post;
 
