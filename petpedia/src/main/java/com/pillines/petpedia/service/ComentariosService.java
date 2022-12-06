@@ -27,7 +27,7 @@ public class ComentariosService {
         comentariosRepository.save(comentarios);
     }
 
-    public void deleteServicio(Integer id) {
+    public void deleteComentarios(Integer id) {
         comentariosRepository.deleteById(id);
     }
 }
