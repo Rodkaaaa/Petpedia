@@ -1,0 +1,102 @@
+[
+    {
+        "id": 24,
+        "nombreCategoria": "ACCESORIOS PARA MASCOTAS"
+    },
+    {
+        "id": 10,
+        "nombreCategoria": "Accesorios Y Medicamentos Veterinarios"
+    },
+    {
+        "id": 25,
+        "nombreCategoria": "ALIMENTOS PARA PERROS"
+    },
+    {
+        "id": 23,
+        "nombreCategoria": "ALIMENTOS PARA PERROS Y GATOS"
+    },
+    {
+        "id": 14,
+        "nombreCategoria": "CONSULTA VETERINARIA"
+    },
+    {
+        "id": 1,
+        "nombreCategoria": "Dermatologia Veterinaria"
+    },
+    {
+        "id": 2,
+        "nombreCategoria": "Ecografia Veterinaria"
+    },
+    {
+        "id": 9,
+        "nombreCategoria": "Especialistas Veterinarios"
+    },
+    {
+        "id": 3,
+        "nombreCategoria": "Hospital Clinico Veterinario"
+    },
+    {
+        "id": 18,
+        "nombreCategoria": "HOSPITALIZACION CANINA"
+    },
+    {
+        "id": 15,
+        "nombreCategoria": "IMPLANTACION DE MICROCHIP PARA PERROS"
+    },
+    {
+        "id": 7,
+        "nombreCategoria": "Instrumental Veterinario"
+    },
+    {
+        "id": 21,
+        "nombreCategoria": "ISAPRE DE MASCOTAS"
+    },
+    {
+        "id": 20,
+        "nombreCategoria": "ISAPRES PARA PERROS Y GATOS"
+    },
+    {
+        "id": 22,
+        "nombreCategoria": "LABORATORIOS VETERINARIOS"
+    },
+    {
+        "id": 19,
+        "nombreCategoria": "MASCOTAS"
+    },
+    {
+        "id": 11,
+        "nombreCategoria": "MEDICOS VETERINARIOS ATENCION DOMICILIARIA"
+    },
+    {
+        "id": 8,
+        "nombreCategoria": "Oftalmologia Veterinaria"
+    },
+    {
+        "id": 12,
+        "nombreCategoria": "PET SHOP"
+    },
+    {
+        "id": 4,
+        "nombreCategoria": "Productos Veterinarios"
+    },
+    {
+        "id": 16,
+        "nombreCategoria": "RADIOGRAFIA PARA PERROS"
+    },
+    {
+        "id": 5,
+        "nombreCategoria": "Radiologia Veterinaria"
+    },
+    {
+        "id": 17,
+        "nombreCategoria": "VACUNACION PARA PERROS"
+    },
+    {
+        "id": 6,
+        "nombreCategoria": "Veterinaria Movil"
+    },
+    {
+        "id": 13,
+        "nombreCategoria": "VETERINARIO A DOMICILIO"
+    }
+]
