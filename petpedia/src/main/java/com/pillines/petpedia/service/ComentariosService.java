@@ -2,9 +2,15 @@ package com.pillines.petpedia.service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Service;
+
 import com.pillines.petpedia.model.Comentarios;
 import com.pillines.petpedia.repository.ComentariosRepository;
 
+@Service
+@Transactional
 public class ComentariosService {
     
     private ComentariosRepository comentariosRepository;
@@ -27,7 +33,7 @@ public class ComentariosService {
         comentariosRepository.save(comentarios);
     }
 
-    public void deleteServicio(Integer id) {
+    public void deleteComentarios(Integer id) {
         comentariosRepository.deleteById(id);
     }
 }
