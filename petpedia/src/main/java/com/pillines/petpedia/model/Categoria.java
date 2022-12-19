@@ -22,8 +22,8 @@ public class Categoria {
     private String nombreCategoria;
 
     // relaciones
-    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Post> post;
+   /*  @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Post> post; */
 
     // constructores
     public Categoria() {

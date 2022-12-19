@@ -1,13 +1,17 @@
 package com.pillines.petpedia.model;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 //clase
@@ -31,9 +35,13 @@ public class Post {
     @JoinColumn(name = "id_usuario", nullable = false)
     private Usuario usuario;
 
-    @ManyToOne()
+   /*  @ManyToOne()
     @JoinColumn(name = "id_categoria", nullable = false)
-    private Categoria categoria;
+    private Categoria categoria; */
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "categoria_post", joinColumns = @JoinColumn(name = "id_post"), inverseJoinColumns = @JoinColumn(name = "id_categoria"))
+    private List<Categoria> categoria;
 
     // constructores
     public Post() {
@@ -49,7 +57,7 @@ public class Post {
         this.statusPost = statusPost;
         this.puntuacion = puntuacion;
         this.usuario = usuario;
-        this.categoria = categoria;
+        /* this.categoria = categoria; */
     }
     // Getter y Setters
 
@@ -121,12 +129,12 @@ public class Post {
         this.usuario = usuario;
     }
 
-    public Categoria getCategoria() {
+  /*   public Categoria getCategoria() {
         return this.categoria;
     }
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
-    }
+    } */
 
 }
