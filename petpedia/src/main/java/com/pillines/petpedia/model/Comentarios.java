@@ -1,5 +1,7 @@
 package com.pillines.petpedia.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 
 import javax.persistence.Entity;
@@ -23,6 +25,7 @@ public class Comentarios {
     private String comentarioText;
     private int statusComentario;
     private int puntacion;
+    private Date fechaComentario;
     // Relaciones
     @ManyToOne()
     @JoinColumn(name = "id_usuarios", nullable = false)
@@ -32,16 +35,18 @@ public class Comentarios {
     public Comentarios() {
     }
 
-    public Comentarios(Integer id, String tituloComentario, String comentarioText, int statusComentario, int puntacion,
+    public Comentarios(Integer id, String tituloComentario, String comentarioText, int statusComentario, int puntacion, Date fechaComentario,
             Post post) {
         this.id = id;
         this.tituloComentario = tituloComentario;
         this.comentarioText = comentarioText;
         this.statusComentario = statusComentario;
         this.puntacion = puntacion;
+        this.fechaComentario = fechaComentario;
         this.post = post;
     }
     // Getter y Setters
+
 
     public Integer getId() {
         return this.id;
@@ -83,6 +88,14 @@ public class Comentarios {
         this.puntacion = puntacion;
     }
 
+    public Date getFechaComentario() {
+        return fechaComentario;
+    }
+
+    public void setFechaComentario(Date fechaComentario) {
+        this.fechaComentario = fechaComentario;
+    }
+    
     public Post getPost() {
         return this.post;
     }
@@ -90,5 +103,6 @@ public class Comentarios {
     public void setPost(Post post) {
         this.post = post;
     }
+
 
 }
