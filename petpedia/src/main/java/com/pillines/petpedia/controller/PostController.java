@@ -1,6 +1,7 @@
 package com.pillines.petpedia.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -25,7 +26,7 @@ public class PostController {
         this.postService = postService;
     }
 
-    @GetMapping("/post/getAll")
+    @GetMapping("/post/getAll/")
     public List<Post> findAll() {
         return (List<Post>) postService.findAll();
     }
@@ -42,4 +43,22 @@ public class PostController {
     public void deletePost(@PathVariable("id") Integer id) {
         postService.deletePost(id);
     }
+
+    @GetMapping("post/get/{nombre}")
+    public List<Post> findAllNombrePost (@PathVariable String nombre){
+        return postService.findAllNombrePost(nombre);
+    }
+    @GetMapping("post/getId/{id}")
+    public Optional<Post> buscarIdPost(@PathVariable Integer id) {
+        return postService.buscarIdPost(id);
+     }
+     @GetMapping("post/veterinarias/")
+     public List<Post> postVeterinarias(){
+        return postService.postVeterinarias();
+    }
+
+    @GetMapping("post/usuarios/")
+    public List<Post> postUsuarios(){
+       return postService.postUsuarios();
+   }
 }
