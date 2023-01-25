@@ -1,6 +1,7 @@
 package com.pillines.petpedia.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -36,4 +37,19 @@ public class PostService {
         postRepository.deleteById(id);
     }
 
+    public Optional<Post> buscarIdPost(Integer id) {
+       return postRepository.findById(id);
+    }
+
+    public List<Post> findAllNombrePost (String nombre){
+        return postRepository.findAllNombrePost(nombre);
+    }
+
+    public List<Post> postVeterinarias(){
+        return postRepository.postVet();
+    }
+
+    public List<Post> postUsuarios(){
+        return postRepository.postUser();
+    }
 }
